@@ -1,4 +1,147 @@
-/*Animaciones Sucursales*/
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+  --primary-color: #000;
+  --hover-color: #666;
+  --background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background-color);
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+}
+
+.navbar__logo span {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar__links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--primary-color);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.navbar__links a:hover {
+  color: var(--hover-color);
+}
+
+.navbar__links a:hover::after {
+  width: 100%;
+}
+
+.navbar__actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__actions a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.navbar__actions a:hover {
+  color: var(--hover-color);
+}
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+}
+/* Diego */
+#sobreNosotros {
+    background-color: #000000;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sobreNosotros h2,
+#sobreNosotros h3 {
+    color: #e0e0e0;
+    font-weight: 700;
+}
+
+#sobreNosotros p,
+#sobreNosotros ul li {
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+#sobreNosotros ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#sobreNosotros button.btn-primary {
+    background-color: #004f7a;
+    border-color: #004f7a;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+#sobreNosotros button.btn-primary:hover,
+#sobreNosotros button.btn-primary:focus {
+    background-color: #003b5a;
+    border-color: #003b5a;
+    color: white;
+}
+
+#sobreNosotros img {
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    max-height: 350px;
+    object-fit: cover;
+}
+/* Diego */
+
 @keyframes Entrada {
     from{
         transform: translateX(-200%);
@@ -14,28 +157,28 @@
 @media (min-width: 768px) {
     .col-md-6 .embed-responsive {
         width: 100%;
-        /* Asegura que el contenedor del iframe ocupe todo el ancho */
+        /* ancho del contenedor del iframe*/
     }
-    /* Opcional: Si necesitas un ajuste más fino, puedes seleccionar directamente el iframe */
+    /* Aplicamos directamente al iframe */
     .col-md-6 .embed-responsive-item {
         width: 100%;
-        /* El iframe tomará el 100% del ancho de su contenedor responsivo */
+        /* ancho del iframe tomará el 100% del ancho del contenedor */
     }
 }
 
 @media (max-width: 768px) {
-    /* Seleccionamos el contenedor del iframe */
+    /* Contenedor del iframe */
     .embed-responsive {
         width: 100%;
-        /* Asegura que el contenedor del iframe ocupe todo el ancho de su columna */
+        /* Asegura que ocupe todo el ancho de su columna */
         max-width: 100%;
-        /* Previene cualquier desbordamiento si hubiera padding o márgenes inesperados */
+        /* evita desbordamiento si hubiera padding/márgenes inesperados */
     }
 
-    /* El iframe en sí mismo tomará el 100% del ancho de su contenedor responsivo */
+    /* El iframe tomará el 100% del ancho */
     .embed-responsive-item {
         width: 100%;
         height: 100%;
-        /* Asegura que la altura se ajuste correctamente según la relación de aspecto */
+        /* Asegura que la altura se ajuste correctamente */
     }
 }
