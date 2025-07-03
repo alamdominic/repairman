@@ -1,0 +1,49 @@
+/* Diego */
+#sobreNosotros {
+    background-color: #000000;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sobreNosotros h2,
+#sobreNosotros h3 {
+    color: #e0e0e0;
+    font-weight: 700;
+}
+
+#sobreNosotros p,
+#sobreNosotros ul li {
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+#sobreNosotros ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#sobreNosotros button.btn-primary {
+    background-color: #004f7a;
+    border-color: #004f7a;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+#sobreNosotros button.btn-primary:hover,
+#sobreNosotros button.btn-primary:focus {
+    background-color: #003b5a;
+    border-color: #003b5a;
+    color: white;
+}
+
+#sobreNosotros img {
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    max-height: 350px;
+    object-fit: cover;
+}
+/* Diego */
