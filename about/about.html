@@ -1,16 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="about.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
 </head>
+
 <body>
     <!--NavBar Migue2-->
     <div id="NavBar">
     </div>
     <!--Main conoce sobre nosotros Diego-->
     <div id="sobreNosotros">
+        <div class="container py-5" id="sobreNosotros"
+            style="background-color: #000000; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <!-- Título principal centrado -->
+            <h2 class="mb-4 text-center fw-bold" style="color: #e0e0e0;">Sobre nosotros</h2>
+
+            <!-- Texto descriptivo -->
+            <div class="mb-4 px-3" style="color: #e0e0e0; font-size: 1.1rem; font-weight: 500; text-align: justify;">
+                <p>
+                    En Repairman somos un equipo apasionado por la tecnología y la reparación de dispositivos móviles.
+                    Nos dedicamos a brindar soluciones rápidas, confiables y de alta calidad para que vuelvas a estar
+                    conectado sin preocupaciones.
+                    Nuestra experiencia y compromiso nos permiten atender desde problemas simples hasta reparaciones
+                    complejas en marcas líderes como Apple, Samsung, Motorola, Huawei y Xiaomi.
+                </p>
+                <p>
+                    Valoramos la transparencia y la satisfacción de nuestros clientes, por eso utilizamos repuestos
+                    originales y ofrecemos garantía en todos nuestros servicios.
+                    Estamos aquí para ayudarte cuando más lo necesitas.
+                </p>
+            </div>
+
+            <!-- Botón centrado -->
+            <div class="text-center">
+                <button id="learnMoreBtn" class="btn btn-primary px-4 py-2 fw-bold"
+                    style="background-color: #004f7a; border-color: #004f7a;">
+                    Conoce más
+                </button>
+            </div>
+
+            <!-- Sección ¿Por qué elegir Repairman? oculta inicialmente -->
+            <div id="moreInfo" class="mt-5 d-none">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3 class="fw-bold" style="color: #e0e0e0;">¿Por qué elegir Repairman?</h3>
+                        <ul class="list-unstyled" style="color: #e0e0e0; font-size: 1.1rem;">
+                            <li>✔ Diagnóstico gratuito y sin compromiso</li>
+                            <li>✔ Repuestos originales y garantía de 90 días (Aplican restricciones)</li>
+                            <li>✔ Servicio rápido: reparaciones en menos de 24 horas</li>
+                            <li>✔ Atención personalizada y soporte post-reparación</li>
+                            <li>✔ Cambios de display y diagnósticos confiables</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="img/tecnico-reparando.jpg" alt="Técnico reparando celular"
+                            class="img-fluid rounded shadow" style="max-height: 350px; object-fit: cover;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!--Nuestras sucursales Migue G-->
     <div id="sucursales">
@@ -24,5 +79,10 @@
     <!--Footer Eduardo-->
     <div id="NavBar">
     </div>
+    <script src="about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
+
 </html>
