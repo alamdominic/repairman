@@ -31,40 +31,50 @@
         </nav>
     </div>
     <section>
-        </div>
-        <div>
-            <h2>Formacion de contacto</h2>
-            <h3>Queremos saber tu opininion</h3>
-            <h4>Telefono: </h4>
-            <h4>Email: </h4>
-            <h4>Ubicación: </h4>
-        </div>
-        <div class="Contactos">
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                    <input type="name" class="form-control" id="nameInput" aria-describedby="emailHelp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 d-flex flex-column justify-content-center" id="infoContact">
+                    <h2>Informacion de contacto</h2>
+                    <h3>Queremos saber tu opininion!</h3>
+                    <br>
+                    <h4>Teléfono: </h4>
+                    <h4>Email: </h4>
+                    <h4>Ubicación: </h4>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div class="col-md-7 d-flex flex-column justify-content-center">
+                    <form method="POST" action="https://formspree.io/f/meokbegp">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre
+                            <input type="name" name="name" class="form-control" id="nameInput" aria-describedby="emailHelp">
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">
+                                Email
+                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"> Telefono
+                            <input type="phone" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp">
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Mensaje
+                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </label>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Acepto recibir ofertas y que mis datos
+                                personales son usados con confidencialidad</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Telefono</label>
-                    <input type="phone" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
     </section>
+    
     <footer id="footer" class="text-white text-start py-3">
         <div class="container">
             <div class="row">

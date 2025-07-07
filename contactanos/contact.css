@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
 :root {
     --primary-color: #000;
     --hover-color: #666;
@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
 }
 
@@ -132,4 +132,24 @@ body {
     .navbar__links {
         display: none;
     }
+}
+
+#infoContact{
+    border-radius: 2%;
+    background-color: #004f7a;
+    color: white;
+    padding: 40px;
+}
+
+.container{
+    width: 100%;  
+    padding: 8rem;
+    border: #666;
+}
+form .form-control {
+    width: 100%;         /* Asegura que ocupen todo el ancho disponible */
+    min-height: 45px;    /* Altura mínima más cómoda */
+    font-size: 16px;     /* Texto más legible */
+    padding: 10px 15px;  /* Más espacio interno */
+    border-radius: 8px;  /* Bordes más suaves */
 }
