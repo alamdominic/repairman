@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+    --primary-color: #000;
+    --hover-color: #666;
+    --background-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background-color);
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+}
+
+.navbar__logo span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+}
+
+.navbar__links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar__links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar__links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.navbar__links a:hover {
+    color: var(--hover-color);
+}
+
+.navbar__links a:hover::after {
+    width: 100%;
+}
+
+.navbar__actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar__actions a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.navbar__actions a:hover {
+    color: var(--hover-color);
+}
+
+#footer {
+    background-color: #004f7a;
+}
+
+.social-media {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #004f7a;
+    opacity: 0.8;
+}
+
+#facebook {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/250px-Logo_de_Facebook.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#instagram {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#youtube {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#x {
+    background-image: url("https://cdn.cms-twdigitalassets.com/content/dam/legal-twitter/sharing-card.png.twimg.768.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+    .navbar__links {
+        display: none;
+    }
+}
