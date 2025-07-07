@@ -40,29 +40,29 @@
             <h4>Ubicación: </h4>
         </div>
         <div class="Contactos">
-            <form>
+            <form id="formulario" onsubmit="return validarDatosForm(event)">>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                    <label for="exampleInputEmail1" class="form-label" id="nombre">Nombre</label>
                     <input type="name" class="form-control" id="nameInput" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <label for="exampleInputEmail1" class="form-label" id="email">Email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Telefono</label>
+                    <label for="exampleInputEmail1" class="form-label" id="telefono">Telefono</label>
                     <input type="phone" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <label for="exampleFormControlTextarea1" class="form-label" id="mensaje">Mensaje</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" > Submit</button>
             </form>
     </section>
     <footer id="footer" class="text-white text-start py-3">
@@ -99,6 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
         integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
         crossorigin="anonymous"></script>
+    <script src="contact.js"> </script>
 </body>
 
 </html>
