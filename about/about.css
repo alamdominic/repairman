@@ -92,3 +92,215 @@ body {
     display: none;
   }
 }
+/* Diego */
+#sobreNosotros {
+    background-color: #000000;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sobreNosotros h2,
+#sobreNosotros h3 {
+    color: #e0e0e0;
+    font-weight: 700;
+}
+
+#sobreNosotros p,
+#sobreNosotros ul li {
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+#sobreNosotros ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#sobreNosotros button.btn-primary {
+    background-color: #004f7a;
+    border-color: #004f7a;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+#sobreNosotros button.btn-primary:hover,
+#sobreNosotros button.btn-primary:focus {
+    background-color: #003b5a;
+    border-color: #003b5a;
+    color: white;
+}
+
+#sobreNosotros img {
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    max-height: 350px;
+    object-fit: cover;
+}
+/* Diego */
+
+/* Eduardo - Footer*/
+#footer {
+  background-color: #004f7a;
+}
+
+.social-media {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #004f7a;
+  opacity: 0.8;
+}
+
+#facebook {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/250px-Logo_de_Facebook.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#instagram {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#youtube {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#x {
+  background-image: url("https://cdn.cms-twdigitalassets.com/content/dam/legal-twitter/sharing-card.png.twimg.768.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@keyframes Entrada {
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+#sucursales{
+    animation: Entrada .9s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+.card:hover .card-img-top {
+  transform: scale(1.02);
+}
+.embed-responsive-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
+}
+.embed-responsive:hover .embed-responsive-item {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*Media queries Sucursales*/
+@media (min-width: 768px) {
+    .col-md-6 .embed-responsive {
+        width: 100%;
+        /* ancho del contenedor del iframe*/
+        height: 420px;
+    }
+    /* Aplicamos directamente al iframe */
+    .col-md-6 .embed-responsive-item {
+        width: 100%;
+        /* ancho del iframe tomará el 100% del ancho del contenedor */
+        height: 420px;
+    }
+}
+@media (max-width: 768px) {
+    /* Contenedor del iframe */
+    .embed-responsive {
+        width: 100%;
+        /* Asegura que ocupe todo el ancho de su columna */
+        max-width: 100%;
+        /* evita desbordamiento si hubiera padding/márgenes inesperados */
+        height: 320px;
+    }
+    /* El iframe tomará el 100% del ancho */
+    .embed-responsive-item {
+        width: 100%;
+        height: 100%;
+        /* Asegura que la altura se ajuste correctamente */
+    }
+}
+
+#misionVision {
+  background-color: #f9f9f9;
+  padding: 5rem 5rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #111;
+  animation: Entrada 0.8s ease;
+}
+
+#misionVision h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  border-left: 4px solid #004f7a;
+  padding-left: 0.75rem;
+}
+
+#misionVision h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #004f7a;
+}
+
+#misionVision p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+#misionVision strong {
+  color: #000;
+  font-weight: 600;
+}
+
+#misionVision ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+#misionVision ul li {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+#misionVision ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #004f7a;
+  font-weight: bold;
+}
+
+
