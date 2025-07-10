@@ -33,48 +33,31 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-5 d-flex flex-column justify-content-center" id="infoContact">
+                <div class="col-md-6 d-flex flex-column justify-content-center" id="infoContact">
                     <h2>Informacion de contacto</h2>
-                    <h3>Queremos saber tu opininion!</h3>
                     <br>
-                    <h4>Teléfono: </h4>
-                    <h4>Email: </h4>
-                    <h4>Ubicación: </h4>
+                    <h3>Queremos saber de ti y de tu opininion!</h3>
+                    <p>Dejanos tus datos para poder contactarte</p>
                 </div>
-                <div class="col-md-7 d-flex flex-column justify-content-center">
-                    <form method="POST" action="https://formspree.io/f/meokbegp">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Nombre
-                            <input type="name" name="name" class="form-control" id="nameInput" aria-describedby="emailHelp">
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">
-                                Email
-                            <input type="email" class="form-control" id="exampleInputEmail1">
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label"> Telefono
-                            <input type="phone" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp">
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Mensaje
-                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </label>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Acepto recibir ofertas y que mis datos
-                                personales son usados con confidencialidad</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <form action="https://formspree.io/f/meokbegp" method="post" class="formularioContacto">
+                        <label for="name">Tu nombre: </label>
+                        <input name="text" id="name" type="name" placeholder="Escribe tu nombre" required>
+                        <label for="email">Tu correo: </label>
+                        <input name="email" id="email" type="email" placeholder="Ejemplo: tucorreo@mail.com" required>
+                        <label for="phone">Tu numero de celular: </label>
+                        <input name="phone" id="phone" type="phone" placeholder="Ejemplo: 222 234 5678" required>
+                        <label for="message">Mensaje:</label>
+                        <textarea name="message" id="message"
+                            placeholder="Déjanos un mensaje o tus dudas, para que podamos contactarte"
+                            required></textarea>
+                        <hr>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
             </div>
     </section>
-    
+
     <footer id="footer" class="text-white text-start py-3">
         <div class="container">
             <div class="row">

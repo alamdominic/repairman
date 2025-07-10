@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
+
 :root {
     --primary-color: #000;
     --hover-color: #666;
@@ -134,22 +135,74 @@ body {
     }
 }
 
-#infoContact{
+#infoContact {
     border-radius: 2%;
     background-color: #004f7a;
     color: white;
     padding: 40px;
 }
 
-.container{
-    width: 100%;  
+.container {
+    width: 100%;
     padding: 8rem;
     border: #666;
 }
+
 form .form-control {
-    width: 100%;         /* Asegura que ocupen todo el ancho disponible */
-    min-height: 45px;    /* Altura mínima más cómoda */
-    font-size: 16px;     /* Texto más legible */
-    padding: 10px 15px;  /* Más espacio interno */
-    border-radius: 8px;  /* Bordes más suaves */
+    width: 100%;
+    /* Asegura que ocupen todo el ancho disponible */
+    min-height: 45px;
+    /* Altura mínima más cómoda */
+    font-size: 16px;
+    /* Texto más legible */
+    padding: 10px 15px;
+    /* Más espacio interno */
+    border-radius: 8px;
+    /* Bordes más suaves */
+}
+
+/*Parte derecha del formulario*/
+/* .clase hijos*/
+.formularioContacto input,
+.formularioContacto label,
+.formularioContacto textarea {
+    display: block;
+    width: 100%;
+
+}
+
+.formularioContacto input,
+.formularioContacto textarea {
+    border-radius: 2%;
+    padding: 10px;
+}
+
+.formularioContacto label {
+    margin-top: 30px;
+    /* reduce el espacio debajo del label */
+}
+
+.formularioContacto input {
+    margin-top: 5px;
+    /* elimina espacio extra arriba del input */
+}
+
+.formularioContacto button {
+    margin-top: 30px;
+    display: block;
+    margin: 0 auto;
+    background-color: #004f7a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.formularioContacto button:hover{
+    background-color: #029cef;
+}
+
+.formularioContacto button:active{
+    background-color: #666;
 }
