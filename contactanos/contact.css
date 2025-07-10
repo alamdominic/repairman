@@ -199,10 +199,19 @@ form .form-control {
     padding: 1%;
 }
 
-.formularioContacto button:hover{
+.formularioContacto button:hover {
     background-color: #029cef;
 }
 
-.formularioContacto button:active{
+.formularioContacto button:active {
     background-color: #666;
+}
+
+input[type="file"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
