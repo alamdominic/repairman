@@ -18,6 +18,7 @@ body {
     background-color: var(--background-color);
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -86,6 +87,157 @@ body {
     color: var(--hover-color);
 }
 
+/* Hero section */
+.hero-section {
+  background: linear-gradient(to bottom, #a2c5de, #003b6f);
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+}
+
+.hero-section p {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.hero-section ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.hero-section ul li {
+  margin-bottom: 5px;
+}
+
+.hero-img {
+  max-width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-light {
+  font-weight: bold;
+}
+
+/* Seminuevos */
+.seminuevos-section {
+  background-color: #f8f9fa;
+}
+
+.seminuevos-section h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.seminuevos-section p.lead {
+  font-size: 2rem;
+}
+
+.seminuevos-section .card {
+  border: 1px solid #ddd;
+  transition: transform 0.3s;
+}
+
+.seminuevos-section .card:hover {
+  transform: scale(1.02);
+}
+
+.card-img-top {
+  max-width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Nuevos */
+.nuevos-section {
+  background-color: #01446f;
+}
+
+.nuevos-section h2 {
+  font-size: 3.5rem;
+}
+
+.nuevos-section p.lead {
+  font-size: 2rem;
+}
+
+.nuevos-img {
+  max-width: 90rem;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.nuevos-img:hover {
+  transform: scale(1.05);
+}
+
+/* Stock */
+.stock-section {
+  background-color: #ffffff;
+}
+
+.stock-section h2 {
+  font-size: 2rem;
+}
+
+.stock-section .card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stock-section .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.stock-section .card img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 250px;
+  object-fit: cover;
+}
+
+.stock-section .btn {
+  margin-top: 10px;
+}
+
+/* Ubicaciones */
+.ubicaciones-section {
+  background-color: #f8f9fa;
+}
+
+.ubicaciones-section h2 {
+  font-size: 2rem;
+}
+
+.ubicaciones-section .card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ubicaciones-section .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.ubicaciones-section .card-img-top {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.ubicaciones-section .card-body {
+  padding: 20px;
+}
+
+.ubicaciones-section .btn {
+  margin-top: 10px;
+}
+
+/* Footer */
+
 #footer {
   background-color: #004f7a;
 }
@@ -125,7 +277,6 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 
 /* Optional: Responsive */
 @media (max-width: 768px) {
