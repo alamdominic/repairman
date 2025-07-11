@@ -170,6 +170,11 @@ body {
   transition: transform 0.3s;
 }
 
+div > img {
+  width: 100%;
+  height: auto;
+}
+
 .nuevos-img:hover {
   transform: scale(1.05);
 }
