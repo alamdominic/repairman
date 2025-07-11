@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    /*padding: 1rem 2rem;*/
     background-color: var(--background-color);
     border-bottom: 1px solid #e5e5e5;
     position: sticky;
@@ -40,7 +40,6 @@ body {
 .navbar__links {
     display: flex;
     list-style: none;
-    gap: 2rem;
 }
 
 .navbar__links a {
@@ -59,7 +58,7 @@ body {
     background: var(--primary-color);
     transition: width 0.3s;
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 0;
 }
 
@@ -128,12 +127,12 @@ body {
 }
 
 
-/* Optional: Responsive */
+/* Optional: Responsive 
 @media (max-width: 768px) {
     .navbar__links {
         display: none;
     }
-}
+}*/
 
 #infoContact {
     border-radius: 2%;
@@ -142,9 +141,9 @@ body {
     padding: 40px;
 }
 
-.container {
+.contact-container{
     width: 100%;
-    padding: 8rem;
+    padding: 3.5rem;
     border: #666;
 }
 
