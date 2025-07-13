@@ -1,0 +1,20 @@
+{
+  "name": "repairman",
+  "version": "1.0.0",
+  "description": "Desarrollo de una plataforma integral que funcione como un ecosistema de confianza para la compra y venta de smartphones nuevos y  seminuevos, así como la reparación rápida y honesta. Más que una simple intermediaria, la plataforma gestionará y asegurará los puntos críticos del proceso para mitigar drásticamente los riesgos de fraude.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:build/css",
+    "gulp": "gulp css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1"
+  }
+}

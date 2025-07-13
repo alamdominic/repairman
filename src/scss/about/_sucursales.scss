@@ -1,0 +1,57 @@
+#sucursales {
+  animation: Entrada 0.9s ease;
+}
+
+.card {
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &-img-top {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover &-img-top {
+    transform: scale(1.02);
+  }
+}
+
+.embed-responsive {
+  &-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  &:hover &-item {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Media queries Sucursales */
+@media (min-width: 768px) {
+  .col-md-6 {
+    .embed-responsive {
+      width: 100%;
+      height: 420px;
+    }
+
+    .embed-responsive-item {
+      width: 100%;
+      height: 420px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .embed-responsive {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+  }
+
+  .embed-responsive-item {
+    width: 100%;
+    height: 100%;
+  }
+}

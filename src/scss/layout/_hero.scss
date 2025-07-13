@@ -1,0 +1,32 @@
+.hero-section {
+  background: linear-gradient(to bottom, #a2c5de, #003b6f);
+  color: white;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    margin-top: 10px;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.hero-img {
+  max-width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-light {
+  font-weight: bold;
+}

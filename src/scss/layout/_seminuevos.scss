@@ -1,0 +1,55 @@
+.seminuevos-section {
+  background-color: #f8f9fa;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  p.lead {
+    font-size: 2rem;
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.card-img-top {
+  max-width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nuevos-section {
+  background-color: #01446f;
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  p.lead {
+    font-size: 2rem;
+  }
+}
+
+.nuevos-img {
+  max-width: 90rem;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+div > img {
+  width: 100%;
+  height: auto;
+}
