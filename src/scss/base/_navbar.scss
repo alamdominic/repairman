@@ -1,51 +1,69 @@
+@use 'variables' as v;
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--background-color);
-  border-bottom: 1px solid #e5e5e5;
+  background-color: v.$blanco1;
+  border-bottom: 1px solid #eaeaea;
   position: sticky;
   top: 0;
+  width: 100%;
+  z-index: 100;
+  font-family: 'Helvetica Neue', sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__logo {
-    span {
-      font-weight: 500;
-      font-size: 1.5rem;
-      letter-spacing: 0.5px;
-      color: var(--primary-color);
+    img {
+      height: 48px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
   &__links {
     display: flex;
-    list-style: none;
     gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    a {
-      text-decoration: none;
-      color: var(--primary-color);
-      font-size: 1rem;
-      position: relative;
-      transition: color 0.3s ease;
-
-      &::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 1px;
-        background: var(--primary-color);
-        transition: width 0.3s;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-      }
-
-      &:hover {
-        color: var(--hover-color);
+    li {
+      a {
+        text-decoration: none;
+        color: #111;
+        font-weight: 500;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        position: relative;
+        padding: 0.25rem 0;
+        transition: color 0.3s ease;
 
         &::after {
-          width: 100%;
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          left: 0;
+          bottom: 0;
+          background-color: #111;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: #333;
+
+          &::after {
+            width: 100%;
+          }
         }
       }
     }
@@ -56,14 +74,37 @@
     gap: 1.5rem;
 
     a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-size: 1.25rem;
-      transition: color 0.3s ease;
+      color: #111;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        color: var(--hover-color);
+        color: #666;
+        transform: scale(1.1);
       }
+    }
+  }
+}
+
+// Optional Responsive Collapse (for smaller screens)
+@media (max-width: 768px) {
+  .navbar {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    &__actions {
+      margin-top: 1rem;
+      width: 100%;
+      justify-content: flex-start;
     }
   }
 }
