@@ -5,33 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="build/css/app.css">
     <title>Repairman</title>
 </head>
 
 <body>
-    
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
-        <img src="img/logo-repairman.png" width="75" height="45" alt="Logo Repairman">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
-        <li class="nav-item"><a class="nav-link" href="venta.html">Venta de equipos</a></li>
-        <li class="nav-item"><a class="nav-link" href="compra.html">Compra de equipos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/Contactanos/contact.html">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Reparaciones</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about/about.html">Conocenos</a></li>
-      </ul>
-      <div class="d-flex d-lg-flex mx-auto justify-content-center navbar__actions">
-        <a href="#" class="mx-auto ms-1"><span class="material-symbols-outlined">search</span></a>
-        <a class="mx-auto" href="#"><span class="material-symbols-outlined">shopping_bag</span></a>
-        <a class=" mx-auto me-1" href="#"><span class="material-symbols-outlined">person</span></a>
-      </div>
+    <div id="NavBar">
+        <nav class="navbar">
+            <div class="container">
+            <a class="navbar__logo" href="index.html">
+                <img src="src/img/logo-repairman.png" alt="Repairman" width="100" height="60" />
+            </a>
+
+            <ul class="navbar__links">
+                <li><a href="venta.html">Venta de equipos</a></li>
+                <li><a href="compra.html">Compra de equipos</a></li>
+                <li><a href="#">Reparaciones</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.html">Conócenos</a></li>
+            </ul>
+
+            <div class="navbar__actions">
+                <a href="#"><span class="material-symbols-outlined">search</span></a>
+                <a href="#"><span class="material-symbols-outlined">shopping_bag</span></a>
+                <a href="#"><span class="material-symbols-outlined">person</span></a>
+            </div>
+            </div>
+        </nav>
     </div>
   </div>
 </nav>
@@ -40,29 +40,27 @@
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-            <div class="col-md-5 text-white py-5">
-                <h1 class="fw-bold mb-3">Repairman</h1>
-                <h3>Repara tu equipo</h3>
-                <p>
-                ¿Pantalla rota? ¿Batería que no rinde? ¿Tu celular no enciende?<br>
-                En Repairman, nos encargamos de devolverle la vida a tu dispositivo.
-                </p>
+            <div class="col-md-6 text-white">
+                <h1>Repara tu equipo</h1>
+                <p>¿Pantalla rota? ¿Batería que no rinde? ¿Tu celular no enciende?</p>
+                <p>En Repairman, nos encargamos de devolverle la vida a tu dispositivo.</p>
                 <ul>
                 <li>Cambio de pantalla</li>
                 <li>Cambio de batería</li>
                 <li>Reparación de parlante o micrófono</li>
                 <li>90 días de Garantía</li>
                 </ul>
-                <a href="#" class="btn btn-light mt-4">📅 Agenda aquí</a>
+                <a href="#" class="btn btn-light">📅 Agenda aquí</a>
             </div>
-            
-            <!-- Imagen -->
-            <div class="col-md-6 text-center py-5">
-                <img src="./img/image.png" alt="Smartphone" class="img-fluid hero-img"/>
+
+            <div class="col-md-6 text-center">
+                <img src="src/img/image.png" alt="Smartphone" class="img-fluid hero-img" />
             </div>
             </div>
         </div>
     </section>
+
+
 
 
     <!-- Equipos Seminuevos -->
@@ -71,7 +69,7 @@
             <div class="row align-items-center">
             <div class="col-md-3 text-center mb-4 mb-md-0">
                 <div class="card p-1 shadow-sm">
-                <img src="./img/iphone16.png" class="card-img-top" alt="iPhone 16 Seminuevo">
+                <img src="src/img/iphone16.png" class="card-img-top" alt="iPhone 16 Seminuevo">
                 <div class="card-body">
                     <h6 class="card-title mb-1">iPhone 16 - seminuevo</h6>
                     <p class="card-text fw-bold mb-1">$18,000</p>
@@ -107,7 +105,7 @@
             </p>
             <a href="#" class="btn btn-light mb-4">Comprar</a>
             <div class="d-flex justify-content-center flex-wrap">
-                <img src="./img/Iphonebackground.png" alt="Modelo 1" class="img-fluid m-2 rounded nuevos-img">
+                <img src="src/img/Iphonebackground.png" alt="Modelo 1" class="img-fluid m-2 rounded nuevos-img">
             </div>
         </div>
     </section>
@@ -120,7 +118,7 @@
         <!-- Producto 1 -->
         <div class="col-6 col-md-3 mb-4">
             <div class="card h-100 text-center shadow-sm">
-            <img src="./img/iphone11.png" class="card-img-top" alt="iPhone 11">
+            <img src="src/img/iphone11.png" class="card-img-top" alt="iPhone 11">
             <div class="card-body">
                 <h5 class="card-title mb-1">iPhone 11</h5>
                 <p class="card-text fw-bold mb-2">$12,000</p>
@@ -132,7 +130,7 @@
         <!-- Producto 2 -->
         <div class="col-6 col-md-3 mb-4">
             <div class="card h-100 text-center shadow-sm">
-            <img src="img/iphone12.png" class="card-img-top" alt="iPhone 12">
+            <img src="src/img/iphone12.png" class="card-img-top" alt="iPhone 12">
             <div class="card-body">
                 <h5 class="card-title mb-1">iPhone 12</h5>
                 <p class="card-text fw-bold mb-2">$14,000</p>
@@ -144,7 +142,7 @@
         <!-- Producto 3 -->
         <div class="col-6 col-md-3 mb-4">
             <div class="card h-100 text-center shadow-sm">
-            <img src="./img/iphone13.png" class="card-img-top" alt="iPhone 13">
+            <img src="src/img/iphone13.png" class="card-img-top" alt="iPhone 13">
             <div class="card-body">
                 <h5 class="card-title mb-1">iPhone 13</h5>
                 <p class="card-text fw-bold mb-2">$16,000</p>
@@ -156,7 +154,7 @@
         <!-- Producto 4 -->
         <div class="col-6 col-md-3 mb-4">
             <div class="card h-100 text-center shadow-sm">
-            <img src="./img/iphone16.png" class="card-img-top" alt="iPhone 14">
+            <img src="src/img/iphone16.png" class="card-img-top" alt="iPhone 14">
             <div class="card-body">
                 <h5 class="card-title mb-1">iPhone 14</h5>
                 <p class="card-text fw-bold mb-2">$18,000</p>
@@ -176,7 +174,7 @@
         <!-- Sucursal 1 -->
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-            <img src="./img/caminoreal.png" class="card-img-top" alt="Sucursal Centro">
+            <img src="src/img/caminoreal.png" class="card-img-top" alt="Sucursal Centro">
             <div class="card-body">
                 <h5 class="card-title fw-bold">Camino real</h5>
                 <p class="card-text mb-1">📍 Antiguo Camino Real a Cholula 4217-Local 106, Sta Cruz Buenavista, 72150 San Andrés Cholula, Pue.</p>
@@ -189,7 +187,7 @@
         <!-- Sucursal 2 -->
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-            <img src="./img/teziutlan.png" class="card-img-top" alt="Sucursal Norte">
+            <img src="src/img/teziutlan.png" class="card-img-top" alt="Sucursal Norte">
             <div class="card-body">
                 <h5 class="card-title fw-bold">Repairman, Reparación de celulares</h5>
                 <p class="card-text mb-1">📍 Av. Teziutlán Nte. 2-Int. 104, La Paz, 72160 Heroica Puebla de Zaragoza, Pue.</p>

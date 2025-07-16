@@ -1,0 +1,21 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+  --primary-color: #000;
+  --hover-color: #666;
+  --background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+}

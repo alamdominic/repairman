@@ -1,0 +1,27 @@
+.stock-section {
+  background-color: #ffffff;
+}
+
+.stock-section h2 {
+  font-size: 2rem;
+}
+
+.stock-section .card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stock-section .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.stock-section .card img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 250px;
+  object-fit: cover;
+}
+
+.stock-section .btn {
+  margin-top: 10px;
+}
