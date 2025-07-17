@@ -1,0 +1,78 @@
+{
+    "nombre": "Repairman API",
+    "descripcion": "Repairman API for test",
+    "recursos": [
+        {
+            "id": 1,
+            "nombre": "Producto 1",
+            "imagen":"https://static.photos/technology/640x360/156",
+            "descripcion": "Producto Iphone 14"
+        },
+        {
+            "id": 2,
+            "nombre": "Producto 2",
+            "imagen":"https://static.photos/technology/640x360/141",
+            "descripcion": "Descripción del Producto 2"
+        },
+        {
+            "id": 3,
+            "nombre": "Producto 3",
+            "imagen":"https://static.photos/technology/640x360/148",
+            "descripcion": "Descripción del Producto 3"
+        },
+        {
+            "id": 4,
+            "nombre": "Producto 4",
+            "imagen":"https://static.photos/technology/640x360/166",
+            "descripcion": "Descripción del Producto 4"
+        },
+        {
+            "id": 5,
+            "nombre": "Producto 5",
+            "imagen":"https://static.photos/technology/640x360/125",
+            "descripcion": "Descripción del Producto 5"
+        },
+        {
+            "id": 6,
+            "nombre": "Producto 6",
+            "imagen":"https://static.photos/technology/640x360/116",
+            "descripcion": "Descripción del Producto 6"
+        },
+        {
+            "id": 7,
+            "nombre": "Producto 7",
+            "imagen":"https://static.photos/technology/640x360/164",
+            "descripcion": "Descripción del Producto 7"
+        },
+        {
+            "id": 8,
+            "nombre": "Producto 8",
+            "imagen":"https://static.photos/technology/640x360/109",
+            "descripcion": "Descripción del Producto 8"
+        },
+        {
+            "id": 9,
+            "nombre": "Producto 9",
+            "imagen":"https://static.photos/technology/640x360/101",
+            "descripcion": "Descripción del Producto 9"
+        },
+        {
+            "id": 10,
+            "nombre": "Producto 10",
+            "imagen":"https://static.photos/technology/640x360/133",
+            "descripcion": "Descripción del Producto 10"
+        },
+        {
+            "id": 11,
+            "nombre": "Producto 11",
+            "imagen":"https://static.photos/technology/640x360/121",
+            "descripcion": "Descripción del Producto 11"
+        },
+        {
+            "id": 12,
+            "nombre": "Producto 12",
+            "imagen":"https://static.photos/technology/640x360/100",
+            "descripcion": "Descripción del Producto 12"
+        }
+    ]
+}
