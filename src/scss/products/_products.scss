@@ -1,0 +1,16 @@
+$primary: #0d6efd; // Color primario de Bootstrap 5
+$blue-25: rgba(13, 110, 253, 0.25); // Para la sombra de enfoque
+
+// Estilos para el botón btn-hover-border
+.btn-hover-border {
+    border: 1px solid transparent; 
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+    // Efecto hover: solo el borde se resalta, el fondo transparente
+    &.btn-primary:hover {
+        background-color: transparent; 
+        color: $primary; // El texto cambia al color primario de Bootstrap
+        border-color: $primary; 
+        box-shadow: 0 0 0 0.25rem $blue-25; 
+    }
+}
