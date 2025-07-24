@@ -1,14 +1,57 @@
 
-const form = document.getElementById("add-Product");
-const onFormSumbmit = (event) => {
-    const formData = new FormData(event.target);
+// Se obtiene el input
+const inputEl = document.getElementById("product-image");
+
+// Se agrega un evento y una función al input
+inputEl.addEventListener("change", () => {
+
+    // Se obtiene un archivo desde el input
+  const file = inputEl.files[0];
+
+  // Se crea un objeto FileReader
+  const fr = new FileReader();
+  
+  // Se onfigura la salida de datos del FileReader como una URL string 
+  fr.readAsDataURL(file);
+
+  // Sees pera a que se complete la lectura del archivo
+  fr.addEventListener("load", () => {
+
+    // Se guarda el resultado
+    const url = fr.result;
+
+    //Obtenemos el formulario del DOM
+    const form = document.getElementById("add-Product");
+
+    // Se crea un objeto FormData
+    const formData = new FormData(form);
+
+    // Agregamos un nuevo campo al formData
+    formData.append("url", url);
+
+    // Creación del objeto JS a partir del formData
     const newProduct = Object.fromEntries(formData.entries());
 
+    // Se transforma en string para que sea posible almacenarlo en localstorage
     const stringProduct = JSON.stringify(newProduct);
 
+    //Contador de productos (agrega un identificador al producto)
     let productCounter = localStorage.length + 1;
-    let productKey= "Product" + productCounter;
+
+    let productKey = "Product" + productCounter;
     localStorage.setItem(productKey, stringProduct);
-    
-}
-form.addEventListener("submit", onFormSumbmit);
+  });
+});
+
+const getProducts = () => {
+  const productos = document.getElementById("product-list");
+  const producto = document.createElement("h1");
+
+  let newProduct = localStorage.getItem("Product1");
+  producto.textContent = newProduct;
+  productos.append(producto);
+};
+
+window.onload = () => {
+  getProducts();
+};
