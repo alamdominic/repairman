@@ -1,9 +1,14 @@
 
 const form = document.getElementById("add-Product");
 const onFormSumbmit = (event) => {
-    event.preventDefault();
     const formData = new FormData(event.target);
     const newProduct = Object.fromEntries(formData.entries());
-    console.log(newProduct);
+
+    const stringProduct = JSON.stringify(newProduct);
+
+    let productCounter = localStorage.length + 1;
+    let productKey= "Product" + productCounter;
+    localStorage.setItem(productKey, stringProduct);
+    
 }
 form.addEventListener("submit", onFormSumbmit);
