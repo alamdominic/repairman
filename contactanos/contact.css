@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
+
+:root {
+    --primary-color: #000;
+    --hover-color: #666;
+    --background-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background-color);
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+}
+
+.navbar__logo span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+}
+
+.navbar__links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar__links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar__links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.navbar__links a:hover {
+    color: var(--hover-color);
+}
+
+.navbar__links a:hover::after {
+    width: 100%;
+}
+
+.navbar__actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar__actions a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.navbar__actions a:hover {
+    color: var(--hover-color);
+}
+
+#footer {
+    background-color: #004f7a;
+}
+
+.social-media {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #004f7a;
+    opacity: 0.8;
+}
+
+#facebook {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/250px-Logo_de_Facebook.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#instagram {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#youtube {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#x {
+    background-image: url("https://cdn.cms-twdigitalassets.com/content/dam/legal-twitter/sharing-card.png.twimg.768.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+    .navbar__links {
+        display: none;
+    }
+}
+
+#infoContact {
+    border-radius: 2%;
+    background-color: #004f7a;
+    color: white;
+    padding: 40px;
+}
+
+.container {
+    width: 100%;
+    padding: 8rem;
+    border: #666;
+}
+
+form .form-control {
+    width: 100%;
+    /* Asegura que ocupen todo el ancho disponible */
+    min-height: 45px;
+    /* Altura mínima más cómoda */
+    font-size: 16px;
+    /* Texto más legible */
+    padding: 10px 15px;
+    /* Más espacio interno */
+    border-radius: 8px;
+    /* Bordes más suaves */
+}
+
+/*Parte derecha del formulario*/
+/* .clase hijos*/
+.formularioContacto input,
+.formularioContacto label,
+.formularioContacto textarea {
+    display: block;
+    width: 100%;
+
+}
+
+.formularioContacto input,
+.formularioContacto textarea {
+    border-radius: 2%;
+    padding: 10px;
+}
+
+.formularioContacto label {
+    margin-top: 30px;
+    /* reduce el espacio debajo del label */
+}
+
+.formularioContacto input {
+    margin-top: 5px;
+    /* elimina espacio extra arriba del input */
+}
+
+.formularioContacto button {
+    margin-top: 30px;
+    display: block;
+    margin: 0 auto;
+    background-color: #004f7a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.formularioContacto button:hover {
+    background-color: #029cef;
+}
+
+.formularioContacto button:active {
+    background-color: #666;
+}
+
+input[type="file"] {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* DISEÑO RESPONSIVE: PANTALLAS PEQUEÑAS */
+/* --------------------------------------------- */
+@media (max-width: 768px) {
+    /* Oculta links si no hay menú hamburguesa */
+    .navbar__links {
+        display: none;
+    }
+
+    /* Opcional: ocultar iconos en móvil */
+    .navbar__actions {
+        display: none;
+    }
+
+    /* Espaciado general reducido */
+    .container {
+        padding: 1rem !important;
+    }
+
+    /* Centrar el texto del contacto */
+    #infoContact {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    /* Estilo del formulario en móvil */
+    .formularioContacto {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Espacio uniforme entre campos */
+    }
+
+    /* Asegura tamaño legible en dispositivos pequeños */
+    .formularioContacto input,
+    .formularioContacto textarea,
+    .formularioContacto label,
+    .formularioContacto button {
+        font-size: 1rem;
+    }
+
+    /* Botón ancho completo */
+    .formularioContacto button {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}
