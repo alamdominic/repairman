@@ -1,0 +1,219 @@
+:root {
+    --color-white: #ffffff;
+    --color-blue: #004f7a;
+    --color-blue-dark: #003a5c;
+    --color-gray: #4f4f4f;
+    --color-placeholder: #adb5bd;
+    --color-gray-light: #e1e1e1;
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+    border: 1px solid var(--color-blue);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    padding: 1.5rem 2rem;
+}
+
+.title-main {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--color-blue);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.title-sub {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.75rem;
+    color: var(--color-blue);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--color-gray);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* Contenedor relativo para que los iconos absolute se posicionen bien */
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* Iconos dentro de los inputs */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    /* Que no interfieran en clics */
+    z-index: 10;
+    /* Para estar encima del input */
+}
+
+/* Padding para dejar espacio a la izquierda del input */
+.with-icon {
+    padding-left: 40px !important;
+}
+
+/* Estilos inputs */
+input.form-control {
+    width: 100%;
+    height: 40px;
+    /* Altura suficiente para ícono */
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 10px 15px;
+    color: var(--color-gray);
+    box-sizing: border-box;
+}
+
+input.form-control::placeholder {
+    color: var(--color-placeholder);
+}
+
+input.form-control:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 5px rgba(0, 79, 122, 0.5);
+    outline: none;
+}
+
+/* Contenedor para inputs con botón toggle de contraseña */
+.password-wrapper {
+    position: relative;
+}
+
+/* Botón toggle mostrar/ocultar contraseña */
+.password-toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray);
+    z-index: 11;
+    /* Para estar sobre inputs e iconos */
+}
+
+.password-toggle-btn img.eye-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+/* Botón enviar */
+.btn-primary {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+    color: var(--color-white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 10px 0;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-blue-dark);
+    border-color: var(--color-blue-dark);
+    outline: none;
+}
+
+/* Links del formulario */
+.text-link {
+    color: var(--color-blue);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover,
+.text-link:focus {
+    color: var(--color-blue-dark);
+    text-decoration: underline;
+}
+
+/* Botón Continuar con Google */
+.google-login-btn {
+    background-color: var(--color-gray-light);
+    border-radius: 50px;
+    color: var(--color-blue);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.google-login-btn img {
+    display: block;
+}
+
+.google-login-btn:hover,
+.google-login-btn:focus {
+    background-color: #cfcfcf;
+    color: var(--color-blue-dark);
+    text-decoration: none;
+    outline: none;
+}
+
+/* Centrado vertical y horizontal para la imagen izquierda */
+.col-md-6:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 0 15px;
+}
+
+.col-md-6:first-child img {
+    max-height: 400px;
+    object-fit: contain;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Mobile */
+@media (max-width: 767.98px) {
+    .row.g-0 {
+        flex-wrap: wrap;
+    }
+
+    .col-md-6 {
+        max-width: 100% !important;
+    }
+
+    .col-md-6:first-child {
+        margin-bottom: 1rem;
+    }
+}
