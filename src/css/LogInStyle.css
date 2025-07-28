@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f4f7fb; /* Fondo suave */
+}
+
+/* Contenedor principal: centrado vertical y horizontal */
+.formularioLogIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caja del formulario */
+.formularioLogIn .border {
+    background: #fff;
+    padding: 40px 45px;
+    border-radius: 16px;                  /* bordes más suaves */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* sombra elegante */
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover sutil en la caja */
+.formularioLogIn .border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Títulos */
+.formularioLogIn h1 {
+    color: #004f7a;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.formularioLogIn h3 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.formularioLogIn input[type="email"],
+.formularioLogIn input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: border 0.3s ease;
+}
+
+/* Efecto focus */
+.formularioLogIn input:focus {
+    border-color: #004f7a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,79,122,0.3);
+}
+
+/* Botón */
+#form-button {
+    background: #004f7a;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#form-button:hover {
+    background: #006fa6;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    color: #004f7a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #006fa6;
+    text-decoration: underline;
+}
