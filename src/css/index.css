@@ -18,12 +18,11 @@ body {
     background-color: var(--background-color);
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    #padding: 1rem 2rem;
     background-color: var(--background-color);
     border-bottom: 1px solid #e5e5e5;
     position: sticky;
@@ -59,7 +58,7 @@ body {
     background: var(--primary-color);
     transition: width 0.3s;
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 0;
 }
 
@@ -283,9 +282,9 @@ div > img {
   background-repeat: no-repeat;
 }
 
-/* Optional: Responsive */
+/* Optional: Responsive 
 @media (max-width: 768px) {
     .navbar__links {
         display: none;
     }
-}
+}*/
