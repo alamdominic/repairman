@@ -2,79 +2,128 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="src/css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Repairman: Registro de usuarios</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="src/css/index.css" />
+  <link rel="stylesheet" href="src/css/register-page.css" />
 </head>
 
 <body>
-  <!-- navbar -->
-      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="src/img/logo-repairman.png" width="75" height="45" alt="Logo Repairman">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
-                    <li class="nav-item"><a class="nav-link" href="products.html">Venta de productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="compra.html">Compra de equipos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Reparaciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Conocenos</a></li>
-                </ul>
-                <div class="d-flex d-lg-flex mx-auto justify-content-center navbar__actions">
-                    <a href="#" class="mx-auto ms-1"><span class="material-symbols-outlined">search</span></a>
-                    <a class="mx-auto" href="#"><span class="material-symbols-outlined">shopping_bag</span></a>
-                    <a class=" mx-auto me-1" href="#"><span class="material-symbols-outlined">person</span></a>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="src/img/logo-repairman.png" width="75" height="45" alt="Logo Repairman" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
+          <li class="nav-item"><a class="nav-link" href="products.html">Venta de productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="compra.html">Compra de equipos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Reparaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Conocenos</a></li>
+        </ul>
+        <div class="d-flex d-lg-flex mx-auto justify-content-center navbar__actions">
+          <a href="#" class="mx-auto ms-1"><span class="material-symbols-outlined">search</span></a>
+          <a class="mx-auto" href="#"><span class="material-symbols-outlined">shopping_bag</span></a>
+          <a class="mx-auto me-1" href="#"><span class="material-symbols-outlined">person</span></a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-  <!-- register form  -->
+  <!-- Body -->
   <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-md-6"></div>
-      <div class="col-md-6 border">
-        <h1 class="text-center" style="color: #004f7a">Repairman</h1>
-        <h3>Registrarse</h3>
-        <form class="form form-control d-grid" id="register-form" onsubmit="onSubmit(event)">
-          <label for="username" class="form-label">Nombre</label>
-          <input type="text" placeholder="Nombre" class="form-control" id="name" name="name" required />
-          <label for="email" class="form-label">Correo</label>
-          <input type="email" placeholder="correo@mail.com" class="form-control" id="email" name="email" required />
-          <label for="password" class="form-label">Contraseña</label>
-          <input type="password" placeholder="Introduce tu contraseña" class="form-control" id="password"
-            name="password" required />
-          <label for="confirm-password">Confirmar contraseña</label>
-          <input type="password" placeholder="Confirma tu contraseña" class="form-control" id="confirm-password"
-            name="confirm-password" required />
-          <label for="phone" class="form-label">Número teléfonico</label>
-          <input type="tel" placeholder="Número teléfonico" class="form-control" id="phone" name="phone" required />
-          <input class="btn btn-primary mt-3 mb-3" type="submit" value="Enviar" id="form-button" />
-        </form>
-        <div class="container w-100 d-flex justify-content-center">
-          <a class="mt-2 mb-2" href="#" style="text-decoration: none">¿Olvidaste tu contraseña?</a>
-        </div>
-        <div class="container">
-          <p class="text-center">
+    <div class="row g-0">
+      <!-- Columna imagen centrada -->
+      <div class="col-md-6 d-flex justify-content-center align-items-center"
+        style="min-height: 400px; padding: 0 15px;">
+        <img src="src/img/logo-repairman.png" alt="Registro imagen" class="img-fluid rounded"
+          style="max-height: 400px; object-fit: contain;" />
+      </div>
+      <!-- Columna formulario con borde y padding -->
+      <div class="col-md-6">
+        <div class="form-container p-4 rounded border">
+          <h1 class="title-main">Repairman</h1>
+          <h3 class="title-sub">Registrarse</h3>
+
+          <form id="register-form" novalidate>
+            <!-- Nombre -->
+            <label for="name" class="form-label">Nombre</label>
+            <div class="input-group position-relative">
+              <img src="src/img/user.svg" alt="Icono usuario" class="input-icon" />
+              <input type="text" id="name" name="name" placeholder="Nombre" required class="form-control with-icon" />
+            </div>
+
+            <!-- Correo -->
+            <label for="email" class="form-label">Correo</label>
+            <div class="input-group position-relative">
+              <img src="src/img/mail.svg" alt="Icono correo" class="input-icon" />
+              <input type="email" id="email" name="email" placeholder="correo@mail.com" required
+                class="form-control with-icon" />
+            </div>
+
+            <!-- Contraseña -->
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-group position-relative password-wrapper">
+              <img src="src/img/password.svg" alt="Icono contraseña" class="input-icon" />
+              <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required
+                autocomplete="new-password" class="form-control with-icon" />
+              <button type="button" class="password-toggle-btn" aria-label="Mostrar contraseña" tabindex="0">
+                <img src="src/img/eye_password_show.svg" alt="Mostrar contraseña" class="eye-icon" />
+              </button>
+            </div>
+
+            <!-- Confirmar contraseña -->
+            <label for="confirm-password" class="form-label">Confirmar contraseña</label>
+            <div class="input-group position-relative password-wrapper">
+              <img src="src/img/password.svg" alt="Icono contraseña" class="input-icon" />
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña"
+                required autocomplete="new-password" class="form-control with-icon" />
+              <button type="button" class="password-toggle-btn" aria-label="Mostrar contraseña" tabindex="0">
+                <img src="src/img/eye_password_show.svg" alt="Mostrar contraseña" class="eye-icon" />
+              </button>
+            </div>
+
+            <!-- Teléfono -->
+            <label for="phone" class="form-label">Número Telefónico (Opcional)</label>
+            <div class="input-group position-relative">
+              <img src="src/img/phone.svg" alt="Icono teléfono" class="input-icon" />
+              <input type="tel" id="phone" name="phone" placeholder="Número teléfonico"
+                class="form-control with-icon" />
+            </div>
+
+            <input type="submit" value="Enviar" class="btn btn-primary w-100 mt-3" id="form-button" />
+          </form>
+
+          <div class="text-center mt-3">
+            <a href="#" class="text-link">¿Olvidaste tu contraseña?</a>
+          </div>
+          <p class="text-center" style="color:#4f4f4f; font-family:'Inter', sans-serif;">
             ¿Ya tienes una cuenta?
-            <a href="#" style="text-decoration: none">Ingresa ahora</a>
+            <a href="#" class="text-link">Ingresa ahora</a>
           </p>
+
+          <a href="#" class="google-login-btn d-flex align-items-center justify-content-center gap-2 p-2 rounded-pill">
+            <img src="src/img/google_logo.svg" alt="Google logo" width="20" height="20" />
+            Continuar con Google
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- footer -->
-
+  <!-- Footer -->
   <footer id="footer" class="text-white text-start py-3">
     <div class="container">
       <div class="row">
@@ -104,13 +153,11 @@
     </div>
   </footer>
 
-  <!-- scripts  -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
 
-  <!-- onFormSubmit -->
-  <script src="./src/js/onFormSubmit.js"></script>
+  <script src="src/js/register-page.js"></script>
 </body>
 
 </html>
