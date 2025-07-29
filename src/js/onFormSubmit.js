@@ -1,7 +1,7 @@
 
 const onSubmit = (event) => {
     // Prevención del evento por defecto
-    event.preventDefault();
+    // event.preventDefault();
     // Obtención del formulario
     const form = document.getElementById("register-form");
 
