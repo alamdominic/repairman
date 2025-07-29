@@ -4,75 +4,75 @@
     "recursos": [
         {
             "id": 1,
-            "nombre": "Producto 1",
+            "nombre": "Iphone 14",
             "imagen":"https://static.photos/technology/640x360/156",
-            "descripcion": "Producto Iphone 14"
+            "descripcion": "Iphone 14"
         },
         {
             "id": 2,
-            "nombre": "Producto 2",
+            "nombre": "Xiaomi Redmi Note 14",
             "imagen":"https://static.photos/technology/640x360/141",
-            "descripcion": "Descripción del Producto 2"
+            "descripcion": "Xiaomi Redmi Note 14"
         },
         {
             "id": 3,
-            "nombre": "Producto 3",
+            "nombre": "Motorola Moto 50 Edge",
             "imagen":"https://static.photos/technology/640x360/148",
-            "descripcion": "Descripción del Producto 3"
+            "descripcion": "Motorola Moto 50 Edge"
         },
         {
             "id": 4,
-            "nombre": "Producto 4",
+            "nombre": "Honor 200",
             "imagen":"https://static.photos/technology/640x360/166",
-            "descripcion": "Descripción del Producto 4"
+            "descripcion": "Honor 200"
         },
         {
             "id": 5,
-            "nombre": "Producto 5",
+            "nombre": "Honor 400",
             "imagen":"https://static.photos/technology/640x360/125",
-            "descripcion": "Descripción del Producto 5"
+            "descripcion": "Honor 400"
         },
         {
             "id": 6,
-            "nombre": "Producto 6",
+            "nombre": "Iphone 16 Pro",
             "imagen":"https://static.photos/technology/640x360/116",
-            "descripcion": "Descripción del Producto 6"
+            "descripcion": "Iphone 16 Pro"
         },
         {
             "id": 7,
-            "nombre": "Producto 7",
+            "nombre": "Samsung Galaxy S24",
             "imagen":"https://static.photos/technology/640x360/164",
-            "descripcion": "Descripción del Producto 7"
+            "descripcion": "Samsung Galaxy S24"
         },
         {
             "id": 8,
-            "nombre": "Producto 8",
+            "nombre": "Samsung Galaxy A36",
             "imagen":"https://static.photos/technology/640x360/109",
-            "descripcion": "Descripción del Producto 8"
+            "descripcion": "Samsung Galaxy A36"
         },
         {
             "id": 9,
-            "nombre": "Producto 9",
+            "nombre": "Xiaomi 14 Pro",
             "imagen":"https://static.photos/technology/640x360/101",
-            "descripcion": "Descripción del Producto 9"
+            "descripcion": "Xiaomi 14 Pro"
         },
         {
             "id": 10,
-            "nombre": "Producto 10",
+            "nombre": "Xiaomi Poco x7 Pro",
             "imagen":"https://static.photos/technology/640x360/133",
-            "descripcion": "Descripción del Producto 10"
+            "descripcion": "Xiaomi Poco x7 Pro"
         },
         {
             "id": 11,
-            "nombre": "Producto 11",
+            "nombre": "Iphone 11",
             "imagen":"https://static.photos/technology/640x360/121",
-            "descripcion": "Descripción del Producto 11"
+            "descripcion": "Iphone 11"
         },
         {
             "id": 12,
-            "nombre": "Producto 12",
+            "nombre": "Samsung Galaxy A34",
             "imagen":"https://static.photos/technology/640x360/100",
-            "descripcion": "Descripción del Producto 12"
+            "descripcion": "Samsung Galaxy A34"
         }
     ]
 }
