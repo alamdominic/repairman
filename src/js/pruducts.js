@@ -41,13 +41,25 @@ inputEl.addEventListener("change", () => {
 });
 
 const getProducts = () => {
+  // Se obtiene el <div></div> donde se van a agregar los productos
   const productos = document.getElementById("product-list");
 
+  // Se itera todo el localstorage
   for (i = 1; i <= localStorage.length; i++) {
+    
+    // Se obtiene el item de la iteración correspondiente desde el localstorage
     let newProduct = localStorage.getItem(`Product${i}`);
+    
+    // Se hace un parse del item ya que se almacena en string en el localstorage 
     let product = JSON.parse(newProduct);
-    let div = document.createElement("div");
-    let template = `<div class="card" style="width: 18rem">
+
+    // Se comprueba que existe el item (que no sea null)
+    if (product) {
+      // Se crea un contenedor para agregar los valores del item dentro de una card
+      let div = document.createElement("div");
+
+      // Plantilla card
+      let template = `<div class="card" style="width: 18rem">
            <img src="${product.url}" class="card-img-top"/>
            <div class="card-body d-grid text-center">
              
@@ -59,11 +71,17 @@ const getProducts = () => {
              </p>
            </div>
          </div>`;
-    div.innerHTML = template;
-    productos.append(div);
+      
+      // Se agrega la card dentro del contenedor creado previamente
+      div.innerHTML = template;
+
+      // Se agrega al contenedor que se obtuvo a través de su id en el DOM
+      productos.append(div);
+    }
   }
 };
 
+// Cada vez se se recarga la página ejecuta las funciones que tiene
 window.onload = () => {
   getProducts();
 };
