@@ -46,10 +46,10 @@ const getProducts = () => {
 
   // Se itera todo el localstorage
   for (i = 1; i <= localStorage.length; i++) {
-    
+
     // Se obtiene el item de la iteración correspondiente desde el localstorage
     let newProduct = localStorage.getItem(`Product${i}`);
-    
+
     // Se hace un parse del item ya que se almacena en string en el localstorage 
     let product = JSON.parse(newProduct);
 
@@ -69,14 +69,23 @@ const getProducts = () => {
              <p class="card-text text-start">
                ${product.productDescription}
              </p>
+             <button id="addProduct" class="btn btn-primary btn-sm">Comprar</button>
            </div>
          </div>`;
-      
+
       // Se agrega la card dentro del contenedor creado previamente
       div.innerHTML = template;
 
       // Se agrega al contenedor que se obtuvo a través de su id en el DOM
       productos.append(div);
+
+      //Seleccionar el boton con id addProduct -- incompleto
+      const btnComprar = document.getElementById('#addProduct');
+      //Event Listener para el boton
+      console.log(product);
+      btnComprar.addEventListener('click', () => {
+        addToCarrito(product); // Le pasamos el objeto Producto con sus atributos
+      }); 
     }
   }
 };

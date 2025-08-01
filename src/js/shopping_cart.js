@@ -3,7 +3,7 @@ function formatCurrency(value) {
 }
 
 /* Muestra los productos en #carritoListContainer  */
-function renderizarCarrito() {
+function showCarrito() {
     const contenedorProductos = document.getElementById('carritoListContainer');
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -52,7 +52,7 @@ function eliminarProducto(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito = carrito.filter(item => item.id !== id);
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    renderizarCarrito(); // Vuelve a renderizar el carrito
+    showCarrito(); // Vuelve a renderizar el carrito
 }
 
 /** Cambia la cantidad de un producto */
@@ -66,7 +66,7 @@ function cambiarCantidad(id, cambio) {
             eliminarProducto(id);
         } else {
             localStorage.setItem('carrito', JSON.stringify(carrito));
-            renderizarCarrito();
+            showCarrito();
         }
     }
 }
@@ -90,5 +90,5 @@ function updateCartTotal() {
 
 // Inicializa el carrito cuando la página se carga
 document.addEventListener('DOMContentLoaded', () => {
-    renderizarCarrito();
+    showCarrito();
 });
