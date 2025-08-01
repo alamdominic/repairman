@@ -55,80 +55,21 @@
             <div class="row">
                 <!-- Columna izquierda: Productos -->
                 <div class="col-md-8">
-                    <div
-                        class="row text-center fw-bold text-uppercase py-3 border-bottom border-2 border-secondary-subtle bg-light">
+                    <div class="row text-center fw-bold text-uppercase py-3 border-bottom border-2 border-secondary-subtle bg-light">
                         <h3 class="mb-4">Carrito de Compras</h3>
                     </div>
                     <!-- Encabezado -->
-                    <div
-                        class="row text-center fw-bold text-uppercase py-3 border-bottom border-2 border-secondary-subtle bg-light">
+                    <div class="row text-center fw-bold text-uppercase py-3 border-bottom border-2 border-secondary-subtle bg-light">
                         <div class="col-md-1">Eliminar</div>
                         <div class="col-md-2">Producto</div>
                         <div class="col-md-3">Precio</div>
                         <div class="col-md-3">Cantidad</div>
                         <div class="col-md-3">Subtotal</div>
                     </div>
-                    Producto
-                    <div class="row align-items-center text-center py-4 border-bottom gap-2">
-                        <!-- Botón eliminar -->
-                        <div class="col-md-1">
-                            <button type="button" class="btn-close" aria-label="Eliminar"></button>
-                        </div>
-                        <!-- Imagen del producto -->
-                        <div class="col-md-2">
-                            <img src="https://via.placeholder.com/80" class="rounded mx-auto d-block"
-                                style="width: 80px;" alt="Foto producto" />
-                        </div>
-                        <!-- Información: Nombre y precios -->
-                        <div class="col-md-3 text-start">
-                            <p class="mb-1 fw-semibold">Apple MacBook Pro 2020</p>
-                            <p class="mb-0 text-decoration-line-through text-muted">$120,000</p>
-                            <p class="fw-bold text-success mb-0">$89,000</p>
-                        </div>
-                        <!-- Cantidad -->
-                        <div class="col-md-3">
-                            <div class="input-group input-group-sm justify-content-center">
-                                <button class="btn btn-outline-dark">-</button>
-                                <input class="form-control text-center border-secondary" value="01"
-                                    style="max-width: 50px;">
-                                <button class="btn btn-outline-dark">+</button>
-                            </div>
-                        </div>
-                        <!-- Subtotal -->
-                        <div class="col-md-3 text-end">
-                            <p class="fw-bold">$89,000</p>
-                        </div>
+                    <div id="carritoListContainer">
+                    <!-- Aqui se mostraran los productos del carrito-->
                     </div>
-                    <div class="row align-items-center text-center py-4 border-bottom gap-2">
-                        <!-- Botón eliminar -->
-                        <div class="col-md-1">
-                            <button type="button" class="btn-close" aria-label="Eliminar"></button>
-                        </div>
-                        <!-- Imagen del producto -->
-                        <div class="col-md-2">
-                            <img src="https://via.placeholder.com/80" class="rounded mx-auto d-block"
-                                style="width: 80px;" alt="Foto producto" />
-                        </div>
-                        <!-- Información: Nombre y precios -->
-                        <div class="col-md-3 text-start">
-                            <p class="mb-1 fw-semibold">Apple MacBook Pro 2020</p>
-                            <p class="mb-0 text-decoration-line-through text-muted">$120,000</p>
-                            <p class="fw-bold text-success mb-0">$89,000</p>
-                        </div>
-                        <!-- Cantidad -->
-                        <div class="col-md-3">
-                            <div class="input-group input-group-sm justify-content-center">
-                                <button class="btn btn-outline-dark">-</button>
-                                <input class="form-control text-center border-secondary" value="01"
-                                    style="max-width: 50px;">
-                                <button class="btn btn-outline-dark">+</button>
-                            </div>
-                        </div>
-                        <!-- Subtotal -->
-                        <div class="col-md-3 text-end">
-                            <p class="fw-bold">$89,000</p>
-                        </div>
-                    </div>
+
                 </div>
 
                 <!-- Columna derecha: Resumen -->
@@ -137,7 +78,7 @@
                         <h4 class="mb-3">Total del Carrito</h4>
                         <div class="d-flex justify-content-between mb-2">
                             <span>Subtotal</span>
-                            <span>$1,000</span>
+                            <span id="subtotal">$1,000</span>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                             <span>Envío</span>
@@ -154,7 +95,7 @@
                         <hr>
                         <div class="d-flex justify-content-between fw-bold mb-3">
                             <span>Total</span>
-                            <span>**función JS**</span>
+                            <span id="total"> $0 </span>
                         </div>
                         <button type="button" class="btn btn-primary btn-lg w-100">PROCEDER AL PAGO</button>
                     </div>

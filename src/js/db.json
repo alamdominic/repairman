@@ -1,78 +1,90 @@
 {
     "nombre": "Repairman API",
     "descripcion": "Repairman API for test",
-    "recursos": [
+    "productos": [
         {
             "id": 1,
-            "nombre": "Iphone 14",
+            "productName": "Iphone 14",
             "imagen":"https://static.photos/technology/640x360/156",
-            "descripcion": "Iphone 14"
+            "productDescription": "Iphone 14",
+            "productCost": 12000
         },
         {
             "id": 2,
-            "nombre": "Xiaomi Redmi Note 14",
+            "productName": "Xiaomi Redmi Note 14",
             "imagen":"https://static.photos/technology/640x360/141",
-            "descripcion": "Xiaomi Redmi Note 14"
+            "productDescription": "Xiaomi Redmi Note 14",
+            "productCost": 6000
         },
         {
             "id": 3,
-            "nombre": "Motorola Moto 50 Edge",
+            "productName": "Motorola Moto 50 Edge",
             "imagen":"https://static.photos/technology/640x360/148",
-            "descripcion": "Motorola Moto 50 Edge"
+            "productDescription": "Motorola Moto 50 Edge",
+            "productCost": 6000
         },
         {
             "id": 4,
-            "nombre": "Honor 200",
+            "productName": "Honor 200",
             "imagen":"https://static.photos/technology/640x360/166",
-            "descripcion": "Honor 200"
+            "productDescription": "Honor 200",
+            "productCost": 5500
         },
         {
             "id": 5,
-            "nombre": "Honor 400",
+            "productName": "Honor 400",
             "imagen":"https://static.photos/technology/640x360/125",
-            "descripcion": "Honor 400"
+            "productDescription": "Honor 400",
+            "productCost": 6500
         },
         {
             "id": 6,
-            "nombre": "Iphone 16 Pro",
+            "productName": "Iphone 16 Pro",
             "imagen":"https://static.photos/technology/640x360/116",
-            "descripcion": "Iphone 16 Pro"
+            "productDescription": "Iphone 16 Pro",
+            "productCost": 22000
         },
         {
             "id": 7,
-            "nombre": "Samsung Galaxy S24",
+            "productName": "Samsung Galaxy S24",
             "imagen":"https://static.photos/technology/640x360/164",
-            "descripcion": "Samsung Galaxy S24"
+            "productDescription": "Samsung Galaxy S24",
+            "productCost": 16000
         },
         {
             "id": 8,
-            "nombre": "Samsung Galaxy A36",
+            "productName": "Samsung Galaxy A36",
             "imagen":"https://static.photos/technology/640x360/109",
-            "descripcion": "Samsung Galaxy A36"
+            "productDescription": "Samsung Galaxy A36",
+            "productCost": 4500
         },
         {
             "id": 9,
-            "nombre": "Xiaomi 14 Pro",
+            "productName": "Xiaomi 14 Pro",
             "imagen":"https://static.photos/technology/640x360/101",
-            "descripcion": "Xiaomi 14 Pro"
+            "productDescription": "Xiaomi 14 Pro",
+            "productCost": 13000
         },
         {
             "id": 10,
-            "nombre": "Xiaomi Poco x7 Pro",
+            "productName": "Xiaomi Poco x7 Pro",
             "imagen":"https://static.photos/technology/640x360/133",
-            "descripcion": "Xiaomi Poco x7 Pro"
+            "productDescription": "Xiaomi Poco x7 Pro",
+            "productCost": 5500
         },
         {
             "id": 11,
-            "nombre": "Iphone 11",
+            "productName": "Iphone 11",
             "imagen":"https://static.photos/technology/640x360/121",
-            "descripcion": "Iphone 11"
+            "productDescription": "Iphone 11",
+            "productCost": 5000
         },
         {
             "id": 12,
-            "nombre": "Samsung Galaxy A34",
+            "productName": "Samsung Galaxy A34",
             "imagen":"https://static.photos/technology/640x360/100",
-            "descripcion": "Samsung Galaxy A34"
+            "productDescription": "Samsung Galaxy A34",
+            "productCost": 4800
         }
     ]
 }
