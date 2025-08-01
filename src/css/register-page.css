@@ -18,7 +18,7 @@
 .title-main {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: var(--color-blue);
     text-align: center;
     margin-bottom: 1.5rem;
@@ -126,7 +126,7 @@ input.form-control:focus {
     color: var(--color-white);
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     padding: 10px 0;
     border-radius: 12px;
     transition: background-color 0.3s ease;
