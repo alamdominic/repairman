@@ -85,6 +85,33 @@ body {
 .navbar__actions a:hover {
   color: var(--hover-color);
 }
+/* Estilos base para los enlaces Iniciar Sesion y Registro */
+.to_action {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* El pseudoelemento que será la línea */
+.to_action::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; /* La línea inicia desde el borde izquierdo */
+    width: 0;  /* Por defecto, la línea no tiene ancho */
+    height: 1px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+    /* Transición solo para el ancho */
+}
+
+.to_action:hover::after {
+    width: 100%;
+    /* Al hacer hover, la línea se expande al 100% */
+}
 
 /* Optional: Responsive 
 @media (max-width: 768px) {

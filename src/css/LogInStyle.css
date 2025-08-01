@@ -18,7 +18,7 @@ body {
     padding: 40px 45px;
     border-radius: 16px;                  /* bordes más suaves */
     box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* sombra elegante */
-    max-width: 400px;
+    max-width: auto;
     width: 100%;
     border: 1px solid #e0e0e0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -78,14 +78,4 @@ body {
 }
 
 /* Links */
-a {
-    color: #004f7a;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
 
-a:hover {
-    color: #006fa6;
-    text-decoration: underline;
-}
