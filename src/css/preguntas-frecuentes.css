@@ -1,0 +1,141 @@
+/* preguntas-frecuentes.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap');
+
+:root {
+    --blanco: #ffffff;
+    /* Fondo blanco puro */
+    --negro: #000000;
+    --azul: #004f7a;
+    --gris: #4f4f4f;
+    --gris-claro: #e8e8e8;
+    --sombra: rgba(0, 79, 122, 0.15);
+    /* sombra azul suave */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    /* Removido max-width y margin auto para dejar que el contenedor maneje el tamaño */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* si quieres, agrega padding vertical */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    color: var(--gris);
+}
+
+/* El contenedor debe controlar el ancho y centrado */
+.content-wrapper {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 1;
+    /* para que crezca y empuje el footer */
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    color: var(--azul);
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+/* Línea decorativa debajo del h1 */
+h1::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: var(--azul);
+    margin: 1rem auto 0 auto;
+    border-radius: 2px;
+}
+
+section {
+    background: var(--blanco);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px var(--sombra);
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 1.5px solid var(--gris-claro);
+    cursor: default;
+}
+
+section:hover {
+    box-shadow: 0 16px 40px var(--sombra);
+    transform: translateY(-8px);
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--azul);
+    margin-bottom: 1.25rem;
+    line-height: 1.25;
+}
+
+section p {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--gris);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+}
+
+/* Adaptabilidad a pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .content-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    section {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+}
