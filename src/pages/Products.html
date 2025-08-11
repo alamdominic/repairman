@@ -7,45 +7,59 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/index.css">
   <title>Repairman: Listado de Productos</title>
+  <link rel="icon" href="../img/favicon.ico">
 </head>
 
 <body>
-
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+  <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
+    aria-label="Menú de navegación principal">
     <div class="container">
       <a class="navbar-brand" href="../../index.html">
-        <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman">
+        <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman, ir a página de inicio">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
-          <li class="nav-item"><a class="nav-link" href="products.html">Venta de productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="compra.html">Compra de equipos</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Reparaciones</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Conocenos</a></li>
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar__links">
           <li class="nav-item">
-              <a class="mx-auto" href="shoppingCart.html">Mi carrito<span class="material-symbols-outlined">shopping_bag</span></a>
+            <a class="nav-link" href="products.html">Venta de equipos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compra.html">Compra de equipos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="agendaReparacion.html">Reparaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Conocenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shoppingCart.html">
+              Mi carrito <span class="material-symbols-outlined align-middle" aria-hidden="true">shopping_bag</span>
+            </a>
           </li>
         </ul>
-        <div class="d-flex d-lg-flex mx-auto justify-content-center navbar__actions">
-          <a href="#" class="mx-auto ms-1"><span class="material-symbols-outlined">search</span></a>
-          <a class="mx-auto" href="shoppingCart.html"><span class="material-symbols-outlined">shopping_bag</span></a>
-          <a class=" mx-auto me-1" href="#"><span class="material-symbols-outlined">person</span></a>
+        <div class="d-flex align-items-center navbar__actions">
+          <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Registrate</a>
+          <a class="nav-link to_action" href="LogInPage.html">Iniciar sesion</a>
         </div>
       </div>
     </div>
   </nav>
 
+
   <div class="container mt-3">
     <div class="row">
       <div class="col-auto me-auto">
+        <h1>Catalogo de equipos</h1>
         <button type="button" class="btn btn-primary btn-hover-border" data-bs-toggle="modal"
           data-bs-target="#exampleModal">
-          <i class="bi bi-plus-circle"></i> Agregar producto
+          <i class="bi bi-plus-circle"></i> Agregar
         </button>
       </div>
     </div>
@@ -55,7 +69,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Agregar producto
+              Agregar 
             </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
@@ -63,24 +77,24 @@
             <!-- Formulario para agregar un producto -->
             <form id="add-Product">
               <div class="mb-3">
-                <label for="productName" class="form-label">Nombre del producto</label>
+                <label for="productName" class="form-label">Nombre del equipo</label>
                 <input type="text" class="form-control" id="productName" placeholder="Iphone 14" name="productName" />
               </div>
               <div class="mb-3">
-                <label for="productDescription" class="form-label">Descripción del producto</label>
+                <label for="productDescription" class="form-label">Descripción</label>
                 <input type="text" class="form-control" id="productDescription" placeholder="Iphone 14"
                   name="productDescription" />
               </div>
               <div class="mb-3">
-                <label for="productCost" class="form-label">Precio del producto</label>
+                <label for="productCost" class="form-label">Precio</label>
                 <input type="number" class="form-control" id="productCost" name="productCost" />
               </div>
               <div class="mb-3">
-                <label for="product-image" class="form-label">Agregar imagen del producto</label>
+                <label for="product-image" class="form-label">Agregar imagen</label>
                 <!-- <input class="form-control" type="file" id="product-image"> -->
                 <input class="form-control" type="file" accept="image/*" id="product-image" />
               </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
           </div>
         </div>
