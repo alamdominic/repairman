@@ -19,106 +19,112 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /*padding: 1rem 2rem;*/
-  background-color: var(--background-color);
-  border-bottom: 1px solid #e5e5e5;
-  position: sticky;
-  top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 1rem 2rem;*/
+    background-color: var(--background-color);
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
 }
 
 .navbar__logo span {
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: 0.5px;
-  color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
 }
 
 .navbar__links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
+    display: flex;
+    list-style: none;
+    gap: 1.4rem;
 }
 
 .navbar__links a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-size: 1rem;
-  position: relative;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
 .navbar__links a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 1px;
-  background: var(--primary-color);
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
 }
 
 .navbar__links a:hover {
-  color: var(--hover-color);
+    color: var(--hover-color);
 }
 
 .navbar__links a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .navbar__actions {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .navbar__actions a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-size: 1.25rem;
-  transition: color 0.3s ease;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
 .navbar__actions a:hover {
-  color: var(--hover-color);
+    color: var(--hover-color);
 }
+
 /* Estilos base para los enlaces Iniciar Sesion y Registro */
 .to_action {
-    position: relative;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2rem;
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
 }
 
 /* El pseudoelemento que será la línea */
 .to_action::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0; /* La línea inicia desde el borde izquierdo */
-    width: 0;  /* Por defecto, la línea no tiene ancho */
-    height: 1px;
-    background-color: #007bff;
-    transition: width 0.3s ease;
-    /* Transición solo para el ancho */
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; /* La línea inicia desde el borde izquierdo */
+  width: 0; /* Por defecto, la línea no tiene ancho */
+  height: 1px;
+  background-color: #007bff;
+  transition: width 0.3s ease; /* Transición solo para el ancho */
 }
 
+/* Efecto hover -- Registrate, Iniciar Sesion */
 .to_action:hover::after {
-    width: 100%;
-    /* Al hacer hover, la línea se expande al 100% */
+  width: 100%; /* Al hacer hover, la línea se expande al 100% */
 }
-
-/* Optional: Responsive 
-@media (max-width: 768px) {
-  .navbar__links {
-    display: none;
-  }
-}*/
+#efecto_navbar {
+  /* Establece un color de fondo base semitransparente */
+  background-color: rgba(255, 255, 255, 0.6); 
+  backdrop-filter: blur(5px); 
+  /* Asegura que el texto y los enlaces tengan un contraste adecuado */
+  color: #000;
+}
+.bg-body-tertiary {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+.navbar {
+  backdrop-filter: blur(20px);
+}
 /* Diego */
 #sobreNosotros {
     background-color: #000000;
