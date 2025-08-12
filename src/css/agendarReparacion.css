@@ -101,8 +101,10 @@ body {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0; /* La línea inicia desde el borde izquierdo */
-    width: 0;  /* Por defecto, la línea no tiene ancho */
+    left: 0;
+    /* La línea inicia desde el borde izquierdo */
+    width: 0;
+    /* Por defecto, la línea no tiene ancho */
     height: 1px;
     background-color: #007bff;
     transition: width 0.3s ease;
@@ -154,41 +156,32 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Div de Contact para formulario*/
 #contact{
     margin-top: 2rem;
 }
-.contactoTitle {
-    margin-top: 2rem;
-}
 
-/* Contenedor padre para alinear horizontalmente */
+/* A partir de aqui cambios en section alam */
 .contacto-container {
-    display: flex;
-    /* Corregido: '1' no es un valor válido. Debe ser 'flex' */
+    display: 1;
     gap: 2rem;
-    align-items: stretch;
-    /* Asegura que ambos elementos tengan la misma altura */
-    flex-wrap: wrap;
-    /* Para responsive */
+    align-items: stretch; /* Asegura que ambos elementos tengan la misma altura */
+    flex-wrap: wrap; /* Para responsive */
 }
 
 .formularioContacto {
     flex: 1;
-    /* Toma el espacio disponible */
-    /* min-height: 600px; <-- Eliminado para que las columnas se estiren */
+    min-height: 600px;
     color: #000;
     border: none;
-    border-radius: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     padding: 2rem;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    justify-content: space-between;
-    /* Distribuye el contenido uniformemente */
+    justify-content: space-between; /* Distribuye el contenido uniformemente */
     text-align: left;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .formularioContacto button {
@@ -200,14 +193,12 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin-top: auto;
-    /* Empuja el botón hacia abajo */
+    margin-top: auto; /* Empuja el botón hacia abajo */
 }
 
 #infoContact {
-    flex: 1;
-    /* Toma el espacio disponible */
-    /* min-height: 600px; <-- Eliminado para que las columnas se estiren */
+    flex: 1; 
+    min-height: 600px;
     background-color: #004f7a;
     border: none;
     border-radius: 1rem;
@@ -217,14 +208,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 #infoContact img {
-    width: 85% !important;
+    width: 90% !important;
     max-width: 400px !important;
     height: auto !important;
     display: block !important;
@@ -244,5 +233,9 @@ body {
     .contacto-container {
         flex-direction: column;
     }
-
+    
+    .formularioContacto,
+    #infoContact {
+        min-height: 400px; /* Altura menor en móviles */
+    }
 }
