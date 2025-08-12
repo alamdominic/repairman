@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary" aria-label="Menú de navegación principal">
+    <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
+        aria-label="Menú de navegación principal">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="src/img/logo-repairman.png" width="75" height="45"
@@ -47,18 +48,18 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center navbar__actions">
-                <a href="src/pages/register-page.html" class="nav-link to_action me-auto me-xl-2">Registrate</a>
-                <a class="nav-link to_action" href="src/pages/LogInPage.html">Iniciar sesion</a>
-            </div>
+                    <a href="src/pages/register-page.html" class="nav-link to_action me-auto me-xl-2">Registrate</a>
+                    <a class="nav-link to_action" href="src/pages/LogInPage.html">Iniciar sesion</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero secion -->
     <section class="hero-section">
-        <div class="container">
+        <div class="container heroSectionDiv">
             <div class="row align-items-center">
-                <div class="col-md-6 text-white">
+                <div class="col-md-8 text-white">
                     <h1>Repara tu equipo</h1>
                     <p>¿Pantalla rota? ¿Batería que no rinde? ¿Tu celular no enciende?</p>
                     <p>En Repairman, nos encargamos de devolverle la vida a tu dispositivo.</p>
@@ -68,15 +69,14 @@
                         <li>Reparación de parlante o micrófono</li>
                         <li>90 días de Garantía</li>
                     </ul>
-                    <a href="/src/pages/agendaReparacion.html" class="btn btn-light">📅 Agenda aquí</a>
-                </div>
-
-                <!-- Imagen -->
-                <div class="col-md-6 text-center py-5">
-                    <img src="src/img/image.png" alt="Smartphone" class="img-fluid hero-img" />
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <a href="/src/pages/agendaReparacion.html" class="btn btn-light">📅 Agenda aquí</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <img src="src/img/image.png" alt="Smartphone" class="hero-img" />
     </section>
 
     <!-- Equipos Seminuevos -->
@@ -104,28 +104,37 @@
         </div>
     </section>
 
-    <!-- Equipos Nuevos -->
+    <!-- Equipos Nuevos 
     <section class="nuevos-section py-5">
         <div class="container text-center text-white">
             <div class="row">
                 <div class="col-md-12">
-
+                    <h2 class="fw-bold">Equipos Nuevos</h2>
+                    <p class="lead mb-4">
+                        Equipos completamente nuevos, sellados y listos para que te los lleves.
+                    </p>
+                    <a href="/src/pages/venta.html" class="btn btn-light mb-4">Comprar</a>
+                    <div class="mt-5">
+                        <img src="src/img/Iphonebackground.png" alt="Modelo 1" class="img-fluid rounded nuevos-img "
+                            style="max-width: 80%;">
+                    </div>
                 </div>
             </div>
-            <div class="row">
-
-            </div>
-            <h2 class="fw-bold">Equipos Nuevos</h2>
+        </div>
+    </section> -->
+    <section class="divEquiposNuevos">
+        <div class="container text-center text-white">
+            <h2 class="fw-bold tituloEquiposNuevos">Equipos Nuevos</h2>
             <p class="lead mb-4">
-                Equipos completamente nuevos, sellados y listos para que te los lleves.
+                Completamente nuevos, sellados y listos para que te los lleves.
             </p>
-            <a href="#" class="btn btn-light mb-4">Comprar</a>
-            <div class="d-flex justify-content-center flex-wrap">
-                <img src="src/img/Iphonebackground.png" alt="Modelo 1" class="img-fluid m-2 rounded nuevos-img">
-            </div>
+            <a href="/src/pages/venta.html" class="btn btn-light mb-4">Comprar</a>
+        </div>
+        <div class="imagenEquiposNuevos d-flex justify-content-center">
+            <img src="src/img/Iphonebackground.png" alt="Modelo 1" class="img-fluid rounded nuevos-img"
+                style="max-width: 70%;">
         </div>
     </section>
-
     <!-- Nuestro Stock -->
     <section class="stock-section py-5" id="stock">
         <div class="container" id="productList">

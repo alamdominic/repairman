@@ -2,88 +2,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
 :root {
-    --primary-color: #000;
-    --hover-color: #666;
-    --background-color: #fff;
+  --primary-color: #000;
+  --hover-color: #666;
+  --background-color: #fff;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: var(--background-color);
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /*padding: 1rem 2rem;*/
-    background-color: var(--background-color);
-    border-bottom: 1px solid #e5e5e5;
-    position: sticky;
-    top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*padding: 1rem 2rem;*/
+  background-color: var(--background-color);
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
 }
 
 .navbar__logo span {
-    font-weight: 500;
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
-    color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
 }
 
 .navbar__links {
-    display: flex;
-    list-style: none;
-    gap: 1.4rem;
+  display: flex;
+  list-style: none;
+  gap: 1.4rem;
 }
 
 .navbar__links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    position: relative;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .navbar__links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: var(--primary-color);
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--primary-color);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
 }
 
 .navbar__links a:hover {
-    color: var(--hover-color);
+  color: var(--hover-color);
 }
 
 .navbar__links a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .navbar__actions {
-    display: flex;
-    gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .navbar__actions a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 .navbar__actions a:hover {
-    color: var(--hover-color);
+  color: var(--hover-color);
 }
 
 /* Estilos base para los enlaces Iniciar Sesion y Registro */
@@ -101,39 +101,56 @@ body {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0; /* La línea inicia desde el borde izquierdo */
-  width: 0; /* Por defecto, la línea no tiene ancho */
+  left: 0;
+  /* La línea inicia desde el borde izquierdo */
+  width: 0;
+  /* Por defecto, la línea no tiene ancho */
   height: 1px;
   background-color: #007bff;
-  transition: width 0.3s ease; /* Transición solo para el ancho */
+  transition: width 0.3s ease;
+  /* Transición solo para el ancho */
 }
 
 /* Efecto hover -- Registrate, Iniciar Sesion */
 .to_action:hover::after {
-  width: 100%; /* Al hacer hover, la línea se expande al 100% */
+  width: 100%;
+  /* Al hacer hover, la línea se expande al 100% */
 }
+
 #efecto_navbar {
   /* Establece un color de fondo base semitransparente */
-  background-color: rgba(255, 255, 255, 0.6); 
-  backdrop-filter: blur(5px); 
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
   /* Asegura que el texto y los enlaces tengan un contraste adecuado */
   color: #000;
 }
+
 .bg-body-tertiary {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
+
 .navbar {
   backdrop-filter: blur(20px);
 }
 
 /* Hero section */
+/* Hero section */
 .hero-section {
   background: linear-gradient(to bottom, #a2c5de, #003b6f);
   color: white;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#heroSectionDiv {
+  padding-top: 4rem;
+  margin-top: 100 px;
 }
 
 .hero-section h1 {
-  font-size: 4rem;
+  margin-top: 90px;
+  font-size: 5rem;
 }
 
 .hero-section p {
@@ -141,19 +158,35 @@ body {
   font-size: 1.5rem;
 }
 
-.hero-section ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
 .hero-section ul li {
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
+/* Estilos de la imagen */
 .hero-img {
-  max-width: 150%;
+  position: absolute;
+  /* Ancla la imagen a un punto específico */
+  bottom: 0;
+  /* Anclado a la parte inferior */
+  right: 0;
+  /* Anclado a la derecha */
+  max-width: 50%;
+  /* La imagen será responsive. Ajusta el valor si es necesario */
   height: auto;
   border-radius: 10px;
+}
+
+/* Media query para pantallas más pequeñas (opcional, pero recomendado) */
+@media (max-width: 768px) {
+  .hero-img {
+    max-width: 80%;
+    /* Aumenta el tamaño de la imagen en móviles */
+    position: static;
+    /* La imagen vuelve al flujo normal en dispositivos móviles */
+    margin: 20px auto;
+    display: block;
+  }
 }
 
 .btn-light {
@@ -189,27 +222,24 @@ body {
   border-radius: 10px;
 }
 
-/* Nuevos */
-.nuevos-section {
+/* Equipos Nuevos */
+.divEquiposNuevos {
   background-color: #01446f;
 }
 
-.nuevos-section h2 {
-  font-size: 3.5rem;
+.tituloEquiposNuevos {
+  font-size: 6rem;
 }
 
 .nuevos-section p.lead {
-  font-size: 2rem;
+  font-size: 5rem;
 }
 
-.nuevos-img {
-  max-width: 90rem;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
+.nuevos-img:hover {
+  transform: scale(1.09);
 }
 
-div > img {
+div>img {
   width: 100%;
   height: auto;
 }
@@ -233,7 +263,7 @@ div > img {
 
 .stock-section .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .stock-section .card img {
@@ -263,7 +293,7 @@ div > img {
 
 .ubicaciones-section .card:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .ubicaciones-section .card-img-top {
