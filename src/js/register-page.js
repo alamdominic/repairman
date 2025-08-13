@@ -18,6 +18,7 @@ document.querySelectorAll('.password-toggle-btn').forEach(button => {
 
 // Validación al enviar formulario
 document.getElementById('register-form').addEventListener('submit', e => {
+    // e.preventDefault();
     const form = e.target;
 
     // Validación HTML5 estándar
@@ -37,4 +38,35 @@ document.getElementById('register-form').addEventListener('submit', e => {
         form.querySelector('#confirm-password').focus();
         return;
     }
+
+    const formData = new FormData(form);
+    const newEntry = Object.fromEntries(formData.entries());
+    const url = `http://localhost:8080/api/v1/repairman/create-customer`;
+
+    const user = {
+        username: newEntry.username,
+        firstname: newEntry.name,
+        lastname: newEntry.lastname,
+        password: newEntry.password,
+        email: newEntry.email,
+        phonenumber: newEntry.phone   
+    }
+
+     fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        // body: JSON.stringify(user)
+        body: user
+    })
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log('Guardado', data);
+        })
+        .catch(error => {
+            console.error(error);
+        })
 });
