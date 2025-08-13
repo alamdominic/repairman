@@ -1,0 +1,129 @@
+.pago-page .form-wrapper {
+    margin-bottom: 4rem;
+    max-width: 450px;
+    margin: 0 auto;
+    /* Centrado horizontal del formulario */
+    background-color: #f9fafb;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.pago-page .form-wrapper form>.mb-3 {
+    margin-bottom: 1.25rem;
+}
+
+.pago-page .form-wrapper label.form-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #4f4f4f;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    display: block;
+}
+
+.pago-page .form-wrapper input.form-control {
+    padding: 0.6rem 0.75rem;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.pago-page .form-wrapper input.form-control:focus {
+    outline: none;
+    border-color: #004f7a;
+    box-shadow: 0 0 8px rgba(0, 79, 122, 0.4);
+    transition: all 0.3s ease;
+}
+
+.pago-page .form-wrapper .form-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #4f4f4f;
+    margin-top: 0.25rem;
+    /* Separación corregida para evitar superposición */
+    margin-bottom: 1.1rem;
+    display: block;
+}
+
+.pago-page .form-wrapper button[type="submit"] {
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: #004f7a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pago-page .form-wrapper button[type="submit"]:hover,
+.pago-page .form-wrapper button[type="submit"]:focus {
+    background-color: #003a5c;
+    outline: none;
+}
+
+/* Título */
+.pago-page h1.title-main {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    /* Ajustado para que no sea tan grande */
+    color: #004f7a;
+    line-height: 1.1;
+}
+
+/* Información bancaria texto */
+.pago-page .bank-info p,
+.pago-page .bank-info ul,
+.pago-page .bank-info li {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #4f4f4f;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.pago-page .bank-info ul {
+    padding-left: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* Layout para que el footer quede pegado abajo */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.pago-page {
+    flex: 1 0 auto;
+}
+
+#footer {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .pago-page .form-wrapper {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .pago-page h1.title-main {
+        font-size: 30px;
+    }
+}

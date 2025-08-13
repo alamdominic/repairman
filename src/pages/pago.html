@@ -7,9 +7,10 @@
     <title>Repairman: Carrito de compras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/pago.css" />
+    <link rel="icon" href="../img/favicon.ico" />
 </head>
 
 <body>
@@ -42,64 +43,61 @@
         </div>
     </nav>
 
-    <!-- Shopping Cart  -->
-    <main>
-        <div class="container my-5">
-            <div class="row">
-                <!-- Columna izquierda: Productos -->
-                <div class="col-md-8">
-                    <div
-                        class="row text-center fw-bold text-uppercase py-3 border-bottom border-2 border-secondary-subtle bg-light">
-                        <h3 class="mb-4">Carrito de Compras</h3>
-                    </div>
-                    <!-- Encabezado -->
-                    <div
-                        class="row text-center fw-bold text-uppercase py-3 border-bottom border-2 border-secondary-subtle bg-light">
-                        <div class="col-md-1">Eliminar</div>
-                        <div class="col-md-2">Producto</div>
-                        <div class="col-md-3">Precio</div>
-                        <div class="col-md-3">Cantidad</div>
-                        <div class="col-md-3">Subtotal</div>
-                    </div>
-                    <div id="carritoListContainer">
-                        <!-- Aqui se mostraran los productos del carrito-->
-                    </div>
+    <main class="pago-page container mt-5 mb-5">
+        <h1 class="mb-4 title-main">Pago por Depósito Bancario</h1>
 
+        <section class="bank-info mb-4">
+            <p>Por favor, realiza un depósito en la siguiente cuenta bancaria de la empresa:</p>
+            <ul>
+                <li><strong>Banco:</strong> Banco CH56</li>
+                <li><strong>Cuenta:</strong> 1234567890</li>
+                <li><strong>Titular:</strong> Repairman S.A. de C.V.</li>
+                <li><strong>CLABE Interbancaria:</strong> 012345678901234567</li>
+            </ul>
+            <p>Después de realizar el depósito, sube tu comprobante de pago (voucher) en formato imagen o PDF para
+                completar el proceso.</p>
+        </section>
+
+        <section class="form-wrapper">
+            <form id="paymentForm" enctype="multipart/form-data" novalidate>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo"
+                        required />
+                    <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
                 </div>
 
-                <!-- Columna derecha: Resumen -->
-                <div class="col-md-4">
-                    <div class="border rounded p-4 mb-4 bg-light">
-                        <h4 class="mb-3">Total del Carrito</h4>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal</span>
-                            <span id="subtotal"></span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Envío</span>
-                            <span>$199</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Impuestos</span>
-                            <span>16%</span>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between fw-bold mb-3">
-                            <span>Total</span>
-                            <span id="total"> $0 </span>
-                        </div>
-                        <a href="pago.html" class="btn btn-primary btn-lg w-100" role="button">Proceder al pago</a>
-                    </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com"
+                        required />
+                    <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
                 </div>
-            </div>
-        </div>
+
+                <div class="mb-3">
+                    <label for="monto" class="form-label">Monto depositado</label>
+                    <input type="number" step="0.01" class="form-control" id="monto" name="monto" placeholder="0.00"
+                        required min="0.01" />
+                    <div class="invalid-feedback">Por favor ingresa un monto válido mayor a cero.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="voucher" class="form-label">Comprobante de pago (voucher)</label>
+                    <input type="file" class="form-control" id="voucher" name="voucher" accept=".jpg, .jpeg, .png, .pdf"
+                        required />
+                    <div class="form-text">Formatos permitidos: JPG, PNG, PDF</div>
+                    <div class="invalid-feedback">Por favor sube un comprobante válido.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn">Enviar comprobante</button>
+            </form>
+        </section>
     </main>
 
     <!-- footer -->
     <footer id="footer">
         <div class="container">
             <div class="row-footer">
-                <!-- Información legal -->
                 <div class="col legal-column">
                     <h2 class="footer-title">Información legal</h2>
                     <ul class="footer-list">
@@ -114,7 +112,6 @@
                     </ul>
                 </div>
 
-                <!-- Preguntas frecuentes -->
                 <div class="col faq-column">
                     <h2 class="footer-title">Preguntas frecuentes</h2>
                     <ul class="footer-list">
@@ -133,7 +130,6 @@
                     </ul>
                 </div>
 
-                <!-- Redes sociales -->
                 <div class="col social-column">
                     <nav class="social-media-links" role="navigation" aria-label="Redes sociales">
                         <a href="https://www.facebook.com/repairmanpuebla/" target="_blank" rel="noopener noreferrer"
@@ -157,13 +153,10 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
-        crossorigin="anonymous"></script>
-    <script src="../js/shopping_cart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+9/ENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../js/pago.js"></script>
 </body>
 
 </html>
