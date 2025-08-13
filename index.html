@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/footer.css">
     <title>Repairman</title>
     <link rel="icon" href="/src/img/favicon.ico">
 </head>
@@ -181,34 +182,70 @@
         </div>
     </section>
 
-    <footer id="footer" class="text-white text-start py-3">
+    <footer id="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h6>Términos y condiciones</h6>
-                    <p>Politica de privacidad</p>
-                    <p>Tratamiento de datos personales</p>
-                    <p>Garantias</p>
+            <div class="row-footer">
+                <!-- Información legal -->
+                <div class="col legal-column">
+                    <h2 class="footer-title">Información legal</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="src/pages/informacion-legal/politica-de-privacidad.html"
+                                aria-label="Política de privacidad" class="footer-link">Política de privacidad</a></li>
+                        <li class="footer-list-item"><a href="src/pages/informacion-legal/aviso-legal.html"
+                                aria-label="Aviso legal" class="footer-link">Aviso legal</a></li>
+                        <li class="footer-list-item"><a href="src/pages/informacion-legal/politica-de-cookies.html"
+                                aria-label="Política de cookies" class="footer-link">Política de cookies</a></li>
+                        <li class="footer-list-item"><a href="src/pages/informacion-legal/garantia.html"
+                                aria-label="Garantía" class="footer-link">Garantía</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <h6>Preguntas frecuentes</h6>
-                    <p>¿Dónde está mi pedido?</p>
-                    <p>¿Cómo agendo una reparación?</p>
-                    <p>¿Qué calidad es la que se usara en mi reparación?</p>
-                    <p>¿Cuáles son los pasos para vender mi teléfono?</p>
+
+                <!-- Preguntas frecuentes -->
+                <div class="col faq-column">
+                    <h2 class="footer-title">Preguntas frecuentes</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="src/pages/preguntas-frecuentes.html#tipos-de-reparaciones"
+                                aria-label="¿Qué tipos de reparaciones ofrecen?" class="footer-link">¿Qué tipos de
+                                reparaciones ofrecen?</a></li>
+                        <li class="footer-list-item"><a href="src/pages/preguntas-frecuentes.html#tiempo-de-reparacion"
+                                aria-label="¿Cuánto tiempo tarda una reparación?" class="footer-link">¿Cuánto tiempo
+                                tarda
+                                una reparación?</a></li>
+                        <li class="footer-list-item"><a href="src/pages/preguntas-frecuentes.html#incluye-garantia"
+                                aria-label="¿Qué incluye la garantía?" class="footer-link">¿Qué incluye la garantía?</a>
+                        </li>
+                        <li class="footer-list-item"><a href="src/pages/preguntas-frecuentes.html#vender-celular"
+                                aria-label="¿Cómo puedo vender mi celular usado?" class="footer-link">¿Cómo puedo vender
+                                mi
+                                celular usado?</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-5">
-                    <div class="d-flex justify-content-end py-3 gap-3">
-                        <a href="#" class="social-media" id="facebook"></a>
-                        <a href="#" class="social-media" id="instagram"></a>
-                        <a href="#" class="social-media" id="youtube"></a>
-                        <a href="#" class="social-media" id="x"></a>
-                    </div>
-                    <p class="text-end py-4">© 2025 — Repairman</p>
+
+                <!-- Redes sociales -->
+                <div class="col social-column">
+                    <nav class="social-media-links" role="navigation" aria-label="Redes sociales">
+                        <a href="https://www.facebook.com/repairmanpuebla/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook" class="social-media-icon">
+                            <img src="src/img/facebook-logo.svg" alt="Facebook" />
+                        </a>
+                        <a href="https://www.instagram.com/repairmanpuebla/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram" class="social-media-icon">
+                            <img src="src/img/instagram-logo.svg" alt="Instagram" />
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=522213601451" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp" class="social-media-icon">
+                            <img src="src/img/whatsapp-logo.svg" alt="WhatsApp" />
+                        </a>
+                        <a href="mailto:contacto.repairman@gmail.com" aria-label="Email" class="social-media-icon">
+                            <img src="src/img/gmail-logo.svg" alt="Email" />
+                        </a>
+                    </nav>
+                    <p class="copyright">© 2025 — Repairman</p>
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
