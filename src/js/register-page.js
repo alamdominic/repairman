@@ -16,7 +16,6 @@ document.querySelectorAll('.password-toggle-btn').forEach(button => {
     });
 });
 
-// AHORA TODO SE MANEJA EN UN SOLO EVENTO DE SUBMIT
 document.getElementById('register-form').addEventListener('submit', e => {
     // 1. Evita el envío por defecto para manejar la lógica con JS
     e.preventDefault();
@@ -31,8 +30,7 @@ document.getElementById('register-form').addEventListener('submit', e => {
 
     const password = form.querySelector('#password').value;
     
-
-    // 3. Si las validaciones pasan, obtén los datos y haz la llamada a la API
+    // Validaciones y llamada a la API
     const user = {
         username: form.querySelector('#nickname').value,
         firstname: form.querySelector('#name').value,
