@@ -16,6 +16,7 @@
 body {
   font-family: 'Helvetica Neue', sans-serif;
   background-color: var(--background-color);
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -135,64 +136,53 @@ body {
 
 /* Hero section */
 .hero-section {
-  background: linear-gradient(to bottom, #a2c5de, #003b6f);
-  color: white;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
+    background: linear-gradient(to bottom, #a2c5de, #003b6f);
+    color: white;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-#heroSectionDiv {
-  padding-top: 4rem;
-  margin-top: 100px;
+.heroSectionDiv {
+    padding-top: 185px; /* Ajusta este valor para bajar el texto */
 }
 
+/* El resto de tu CSS se mantiene igual */
 .hero-section h1 {
-  margin-top: 300px;
-  margin-left: -100px;
-  font-size: 5rem;
+    font-size: 5rem;
 }
 
 .hero-section p {
-  margin-top: 10px;
-  margin-left: -100px;
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .hero-section ul li {
-  margin-bottom: 5px;
-  margin-left: -100px;
-  font-size: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
 }
 
 /* Estilos de la imagen */
 .hero-img {
-  position: absolute;
-  /* Ancla la imagen a un punto específico */
-  bottom: 0;
-  /* Anclado a la parte inferior */
-  right: 0;
-  /* Anclado a la derecha */
-  max-width: 52%;
-  /* La imagen será responsive. Ajusta el valor si es necesario */
-  height: auto;
-  border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 52%;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* Media query para pantallas más pequeñas (opcional, pero recomendado) */
 @media (max-width: 768px) {
-  .hero-img {
-    max-width: 80%;
-    /* Aumenta el tamaño de la imagen en móviles */
-    position: static;
-    /* La imagen vuelve al flujo normal en dispositivos móviles */
-    margin: 20px auto;
-    display: block;
-  }
+    .hero-img {
+        max-width: 80%;
+        position: static;
+        margin: 20px auto;
+        display: block;
+    }
 }
 
 .btn-light {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 /* Seminuevos */

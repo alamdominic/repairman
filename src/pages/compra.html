@@ -16,31 +16,36 @@
     <!-- Navbar -->
     <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
         aria-label="Menú de navegación principal">
+    <!-- Navbar -->
+    <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
+        aria-label="Menú de navegación principal">
         <div class="container">
             <a class="navbar-brand" href="../../index.html">
+                <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman, ir a página de inicio">
                 <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman, ir a página de inicio">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
                 aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar__links">
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Venta de equipos</a>
+                        <a class="nav-link" href="products.html">Vender</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="compra.html">Compra de equipos</a>
+                        <a class="nav-link" href="compra.html">Comprar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agendaReparacion.html">Reparar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="agendaReparacion.html">Reparaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Conocenos</a>
+                        <a class="nav-link" href="about.html">Conócenos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="shoppingCart.html">
@@ -50,8 +55,8 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center navbar__actions">
-                    <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Registrate</a>
-                    <a class="nav-link to_action" href="LogInPage.html">Iniciar sesion</a>
+                    <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Regístrate</a>
+                    <a class="nav-link to_action" href="customers.html">Clientes</a>
                 </div>
             </div>
         </div>
@@ -60,7 +65,7 @@
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="row">
-            <!-- Sidebar filtros -->
+            <!-- Sidebar filtros 
             <aside class="col-md-3">
                 <div class="filters">
                     <h5>Categoría</h5>
@@ -79,7 +84,7 @@
                         <li><input type="checkbox"> Motorola</li>
                         <li><input type="checkbox"> Realme</li>
                     </ul>
-
+                
                     <h5>Rango de precio</h5>
                     <input type="range" class="form-range" min="0" max="60000" step="1000">
                     <ul class="list-unstyled">
@@ -90,13 +95,15 @@
                         <li><input type="radio" name="precio"> $40,000 - $50,000</li>
                         <li><input type="radio" name="precio"> Arriba de $50,000</li>
                     </ul>
+                
                 </div>
             </aside>
-
+            -->
             <!-- Productos -->
-            <main class="col-md-9">
+            <main class="container">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <input type="text" id="buscador" class="form-control w-50" placeholder="Buscar...">
+                    <!--
                     <select class="form-select w-auto">
                         <option>Popular</option>
                         <option>Menor precio</option>
@@ -104,6 +111,7 @@
                         <option>Mejor valorados</option>
                     </select>
                     <span>20/400 Resultados</span>
+                    -->
                 </div>
 
                 <div id="productList" class="row g-4">
@@ -175,6 +183,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/compra.js"></script>
+    <script>
+        obtenerDatos('http://127.0.0.1:5500/src/js/db.json');
+    </script>
 
     <script src="../js/compra.js"></script>
     <script>

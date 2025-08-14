@@ -18,7 +18,7 @@
 .title-main {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: var(--color-blue);
     text-align: center;
     margin-bottom: 1.5rem;
@@ -110,7 +110,6 @@ input.form-control:focus {
     justify-content: center;
     color: var(--color-gray);
     z-index: 11;
-    /* Para estar sobre inputs e iconos */
 }
 
 .password-toggle-btn img.eye-icon {

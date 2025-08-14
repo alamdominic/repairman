@@ -18,26 +18,42 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary">
+  <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
+    aria-label="Menú de navegación principal">
     <div class="container">
       <a class="navbar-brand" href="../../index.html">
-        <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman" />
+        <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman, ir a página de inicio">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
-          <li class="nav-item"><a class="nav-link" href="products.html">Venta de equipos</a></li>
-          <li class="nav-item"><a class="nav-link" href="compra.html">Compra de equipos</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Reparaciones</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Conocenos</a></li>
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar__links">
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="compra.html">Comprar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="agendaReparacion.html">Reparar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Conócenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shoppingCart.html">
+              Mi carrito <span class="material-symbols-outlined align-middle" aria-hidden="true">shopping_bag</span>
+            </a>
+          </li>
         </ul>
-        <div class="d-flex d-lg-flex mx-auto justify-content-center navbar__actions">
-          <a href="register-page.html" class="mx-auto ms-1 fs-5 nav-link to_action">Registrate</a>
-          <a class="mx-auto fs-5 nav-link to_action" href="LogInPage.html">Iniciar sesion</a>
+        <div class="d-flex align-items-center navbar__actions">
+          <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Regístrate</a>
+          <a class="nav-link to_action" href="customers.html">Clientes</a>
         </div>
       </div>
     </div>
@@ -58,15 +74,30 @@
           <h1 class="title-main">Repairman</h1>
           <h3 class="title-sub">Registrarse</h3>
 
-          <form id="register-form" novalidate>
-            <!-- Nombre -->
-            <label for="name" class="form-label">Nombre</label>
-            <div class="input-group position-relative">
-              <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
-              <input type="text" id="name" name="name" placeholder="Nombre" required class="form-control with-icon" />
+          <form id="register-form">
+            <div class="row">
+              <div class="col-6">
+                <label for="name" class="form-label">Nombre</label>
+                <div class="input-group position-relative">
+                  <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                  <input type="text" id="name" name="name" placeholder="Nombre" required
+                    class="form-control with-icon" />
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="lastname" class="form-label">Apellido</label>
+                <div class="input-group position-relative">
+                  <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                  <input type="text" id="lastname" name="lastname" placeholder="Apellido" required
+                    class="form-control with-icon" />
+                </div>
+              </div>
             </div>
-
-            <!-- Correo -->
+            <label for="nickname" class="form-label">Username</label>
+            <div class="input-group position-relative">
+                <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                <input type="text" id="nickname" name="nickname" placeholder="Username" required class="form-control with-icon" />
+            </div>
             <label for="email" class="form-label">Correo</label>
             <div class="input-group position-relative">
               <img src="../img/mail.svg" alt="Icono correo" class="input-icon" />
@@ -74,7 +105,6 @@
                 class="form-control with-icon" />
             </div>
 
-            <!-- Contraseña -->
             <label for="password" class="form-label">Contraseña</label>
             <div class="input-group position-relative password-wrapper">
               <img src="../img/password.svg" alt="Icono contraseña" class="input-icon" />
@@ -85,18 +115,6 @@
               </button>
             </div>
 
-            <!-- Confirmar contraseña -->
-            <label for="confirm-password" class="form-label">Confirmar contraseña</label>
-            <div class="input-group position-relative password-wrapper">
-              <img src="../img/password.svg" alt="Icono contraseña" class="input-icon" />
-              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña"
-                required autocomplete="new-password" class="form-control with-icon" />
-              <button type="button" class="password-toggle-btn" aria-label="Mostrar contraseña" tabindex="0">
-                <img src="../img/eye_password_show.svg" alt="Mostrar contraseña" class="eye-icon" />
-              </button>
-            </div>
-
-            <!-- Teléfono -->
             <label for="phone" class="form-label">Número Telefónico (Opcional)</label>
             <div class="input-group position-relative">
               <img src="../img/phone.svg" alt="Icono teléfono" class="input-icon" />
@@ -104,21 +122,8 @@
                 class="form-control with-icon" />
             </div>
 
-            <input type="submit" value="Enviar" class="btn btn-primary w-100 mt-3" id="form-button" />
+            <button id="submit" class="btn btn-primary w-100 mt-3" id="form-button">Enviar</button>
           </form>
-
-          <div class="text-center mt-3">
-            <a href="#" class="text-link">¿Olvidaste tu contraseña?</a>
-          </div>
-          <p class="text-center" style="color:#4f4f4f; font-family:'Inter', sans-serif;">
-            ¿Ya tienes una cuenta?
-            <a href="LogInPage.html" class="text-link">Ingresa ahora</a>
-          </p>
-
-          <a href="#" class="google-login-btn d-flex align-items-center justify-content-center gap-2 p-2 rounded-pill">
-            <img src="../img/google_logo.svg" alt="Google logo" width="20" height="20" />
-            Continuar con Google
-          </a>
         </div>
       </div>
     </div>
