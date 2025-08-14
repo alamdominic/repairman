@@ -2,84 +2,59 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Preguntas frecuentes - Repairman</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="stylesheet" href="../css/preguntas-frecuentes.css" />
-    <link rel="icon" href="/src/img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Repairman: Listado de Productos</title>
+    <link rel="icon" href="../img/favicon.ico">
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary">
+    <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
+        aria-label="Menú de navegación principal">
         <div class="container">
             <a class="navbar-brand" href="../../index.html">
-                <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman" />
+                <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman, ir a página de inicio">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
-                    <li class="nav-item"><a class="nav-link" href="products.html">Vender</a></li>
-                    <li class="nav-item"><a class="nav-link" href="compra.html">Comprar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Reparar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Conócenos</a></li>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar__links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Vender</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compra.html">Comprar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agendaReparacion.html">Reparar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Conócenos</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="shoppingCart.html">
-                        Mi carrito <span class="material-symbols-outlined align-middle" aria-hidden="true">shopping_bag</span>
+                            Mi carrito <span class="material-symbols-outlined align-middle"
+                                aria-hidden="true">shopping_bag</span>
                         </a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center navbar__actions">
-                    <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Registrate</a>
-                    <a class="nav-link to_action" href="customers.html">Clientes</a>
+                    <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Regístrate</a>
+                    <a class="nav-link to_action" href="LogInPage.html">Clientes</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="content-wrapper" style="max-width: 900px; margin: 0 auto; padding: 20px;">
-        <main>
-            <h1>Preguntas frecuentes</h1>
-
-            <section id="tipos-de-reparaciones">
-
-                <h2>¿Qué tipos de reparaciones ofrecen?</h2>
-                <p>Ofrecemos reparación de pantallas, baterías, puertos de carga, cámaras, botones, entre otros
-                    componentes
-                    de celulares y tablets. También realizamos diagnóstico completo y limpieza interna.</p>
-            </section>
-
-            <section id="tiempo-de-reparacion">
-                <h2>¿Cuánto tiempo tarda una reparación?</h2>
-                <p>El tiempo depende del tipo de reparación y disponibilidad de repuestos, pero generalmente oscila
-                    entre 1
-                    a 3 días hábiles. En casos urgentes ofrecemos servicio express con costo adicional.</p>
-            </section>
-
-            <section id="incluye-garantia">
-                <h2>¿Qué incluye la garantía?</h2>
-                <p>Nuestra garantía cubre las reparaciones realizadas contra defectos de mano de obra y funcionamiento
-                    por
-                    un periodo de 30 días naturales a partir de la entrega del equipo.</p>
-            </section>
-
-            <section id="vender-celular">
-                <h2>¿Cómo puedo vender mi celular usado?</h2>
-                <p>Puedes contactarnos vía WhatsApp, correo o en tienda para que evaluemos tu dispositivo. Ofrecemos
-                    pagos
-                    inmediatos o intercambio por equipos reacondicionados según el estado del celular.</p>
-            </section>
-            <main>
-    </div>
-
-    <!-- Footer -->
     <footer id="footer">
         <div class="container">
             <div class="row-footer">
@@ -102,15 +77,16 @@
                 <div class="col faq-column">
                     <h2 class="footer-title">Preguntas frecuentes</h2>
                     <ul class="footer-list">
-                        <li class="footer-list-item"><a href="#tipos-de-reparaciones"
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#tipos-de-reparaciones"
                                 aria-label="¿Qué tipos de reparaciones ofrecen?" class="footer-link">¿Qué tipos de
                                 reparaciones ofrecen?</a></li>
-                        <li class="footer-list-item"><a href="#tiempo-de-reparacion"
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#tiempo-de-reparacion"
                                 aria-label="¿Cuánto tiempo tarda una reparación?" class="footer-link">¿Cuánto tiempo
                                 tarda una reparación?</a></li>
-                        <li class="footer-list-item"><a href="#incluye-garantia" aria-label="¿Qué incluye la garantía?"
-                                class="footer-link">¿Qué incluye la garantía?</a></li>
-                        <li class="footer-list-item"><a href="#vender-celular"
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#incluye-garantia"
+                                aria-label="¿Qué incluye la garantía?" class="footer-link">¿Qué incluye la garantía?</a>
+                        </li>
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#vender-celular"
                                 aria-label="¿Cómo puedo vender mi celular usado?" class="footer-link">¿Cómo puedo vender
                                 mi celular usado?</a></li>
                     </ul>
@@ -140,9 +116,15 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
 
-    <!-- Bootstrap JS Bundle (Popper + Bootstrap) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts -->
+
 </body>
 
 </html>
