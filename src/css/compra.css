@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.filters h5 {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.filters ul li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.card.product-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card.product-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+    height: 220px;
+}
+
+.card.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.rating {
+    font-size: 0.85rem;
+    color: #f39c12;
+}
+
+.rating span {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.price {
+    font-size: 1rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.text-decoration-line-through {
+    font-size: 0.9rem;
+}

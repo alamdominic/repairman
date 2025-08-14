@@ -134,7 +134,6 @@ body {
 }
 
 /* Hero section */
-/* Hero section */
 .hero-section {
   background: linear-gradient(to bottom, #a2c5de, #003b6f);
   color: white;
@@ -145,21 +144,24 @@ body {
 
 #heroSectionDiv {
   padding-top: 4rem;
-  margin-top: 100 px;
+  margin-top: 100px;
 }
 
 .hero-section h1 {
-  margin-top: 90px;
+  margin-top: 300px;
+  margin-left: -100px;
   font-size: 5rem;
 }
 
 .hero-section p {
   margin-top: 10px;
+  margin-left: -100px;
   font-size: 1.5rem;
 }
 
 .hero-section ul li {
   margin-bottom: 5px;
+  margin-left: -100px;
   font-size: 20px;
 }
 
@@ -171,7 +173,7 @@ body {
   /* Anclado a la parte inferior */
   right: 0;
   /* Anclado a la derecha */
-  max-width: 50%;
+  max-width: 52%;
   /* La imagen será responsive. Ajusta el valor si es necesario */
   height: auto;
   border-radius: 10px;
@@ -235,18 +237,6 @@ body {
   font-size: 5rem;
 }
 
-.nuevos-img:hover {
-  transform: scale(1.09);
-}
-
-div>img {
-  width: 100%;
-  height: auto;
-}
-
-.nuevos-img:hover {
-  transform: scale(1.05);
-}
 
 /* Stock */
 .stock-section {
