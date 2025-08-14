@@ -74,15 +74,30 @@
           <h1 class="title-main">Repairman</h1>
           <h3 class="title-sub">Registrarse</h3>
 
-          <form id="register-form" novalidate>
-            <!-- Nombre -->
-            <label for="name" class="form-label">Nombre</label>
-            <div class="input-group position-relative">
-              <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
-              <input type="text" id="name" name="name" placeholder="Nombre" required class="form-control with-icon" />
+          <form id="register-form">
+            <div class="row">
+              <div class="col-6">
+                <label for="name" class="form-label">Nombre</label>
+                <div class="input-group position-relative">
+                  <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                  <input type="text" id="name" name="name" placeholder="Nombre" required
+                    class="form-control with-icon" />
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="lastname" class="form-label">Apellido</label>
+                <div class="input-group position-relative">
+                  <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                  <input type="text" id="lastname" name="lastname" placeholder="Apellido" required
+                    class="form-control with-icon" />
+                </div>
+              </div>
             </div>
-
-            <!-- Correo -->
+            <label for="nickname" class="form-label">Username</label>
+            <div class="input-group position-relative">
+                <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                <input type="text" id="nickname" name="nickname" placeholder="Username" required class="form-control with-icon" />
+            </div>
             <label for="email" class="form-label">Correo</label>
             <div class="input-group position-relative">
               <img src="../img/mail.svg" alt="Icono correo" class="input-icon" />
@@ -90,7 +105,6 @@
                 class="form-control with-icon" />
             </div>
 
-            <!-- Contraseña -->
             <label for="password" class="form-label">Contraseña</label>
             <div class="input-group position-relative password-wrapper">
               <img src="../img/password.svg" alt="Icono contraseña" class="input-icon" />
@@ -101,18 +115,6 @@
               </button>
             </div>
 
-            <!-- Confirmar contraseña -->
-            <label for="confirm-password" class="form-label">Confirmar contraseña</label>
-            <div class="input-group position-relative password-wrapper">
-              <img src="../img/password.svg" alt="Icono contraseña" class="input-icon" />
-              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña"
-                required autocomplete="new-password" class="form-control with-icon" />
-              <button type="button" class="password-toggle-btn" aria-label="Mostrar contraseña" tabindex="0">
-                <img src="../img/eye_password_show.svg" alt="Mostrar contraseña" class="eye-icon" />
-              </button>
-            </div>
-
-            <!-- Teléfono -->
             <label for="phone" class="form-label">Número Telefónico (Opcional)</label>
             <div class="input-group position-relative">
               <img src="../img/phone.svg" alt="Icono teléfono" class="input-icon" />
@@ -120,7 +122,7 @@
                 class="form-control with-icon" />
             </div>
 
-            <input type="submit" value="Enviar" class="btn btn-primary w-100 mt-3" id="form-button" />
+            <button id="submit" class="btn btn-primary w-100 mt-3" id="form-button">Enviar</button>
           </form>
           <p class="text-center mt-3" style="color:#4f4f4f; font-family:'Inter', sans-serif;">
             ¿Ya tienes una cuenta?

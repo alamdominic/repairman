@@ -53,11 +53,10 @@
     </div>
   </nav>
 
-
   <div class="container mt-3">
     <div class="row">
       <div class="col-auto me-auto">
-        <h1>Catálogo de equipos</h1>
+        <h1>Registro de Ventas</h1>
         <button type="button" class="btn btn-primary btn-hover-border" data-bs-toggle="modal"
           data-bs-target="#exampleModal">
           <i class="bi bi-plus-circle"></i> Agregar
@@ -75,7 +74,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <!-- Formulario para agregar un producto -->
+            <!-- Formulario para agregar una Venta -->
             <form id="add-Product">
               <div class="mb-3">
                 <label for="productName" class="form-label">Nombre del equipo</label>
@@ -101,47 +100,26 @@
         </div>
       </div>
     </div>
-    <!-- Productos -->
-    <div class="container d-flex gap-3 mt-3 mb-3" id="product-list"></div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar producto</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Formulario para agregar un producto -->
-            <form id="add-Product">
-              <div class="mb-3">
-                <label for="product-name" class="form-label">Nombre del producto</label>
-                <input type="text" class="form-control" id="product-name" placeholder="Iphone 14" name="product-name" />
-              </div>
-              <div class="mb-3">
-                <label for="product-description" class="form-label">Descripción del producto</label>
-                <input type="text" class="form-control" id="product-description" placeholder="Iphone 14"
-                  name="product-description" />
-              </div>
-              <div class="mb-3">
-                <label for="product-cost" class="form-label">Precio del producto</label>
-                <input type="number" class="form-control" id="product-cost" name="product-cost" />
-              </div>
-              <div class="mb-3">
-                <label for="product-image" class="form-label">Agregar imagen del producto</label>
-                <input class="form-control" type="file" accept="image/*" id="product-image" />
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Productos -->
-    <div class="row" id="product-list">
+    
+    <!-- Ventas -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Listado de Ventas -->
+            <main class="container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <input type="text" id="buscador" class="form-control w-50" placeholder="Buscar...">
+                </div>
 
+                <div id="product-list" class="row g-4 mb-5">
+                    <!-- Verntas dinámicos aquí -->
+                </div>
+            </main>
+        </div>
     </div>
   </div>
+
+
+
   <footer id="footer">
     <div class="container">
       <div class="row-footer">
