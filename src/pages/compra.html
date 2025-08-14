@@ -4,41 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de iPhones - Repairman</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/compra.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <title>Repairman: Compra de equipos seminuevos</title>
     <link rel="icon" href="../img/favicon.ico">
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary">
+    <!-- Navbar -->
+    <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
+        aria-label="Menú de navegación principal">
         <div class="container">
             <a class="navbar-brand" href="../../index.html">
-                <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman">
+                <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman, ir a página de inicio">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
-                    <li class="nav-item"><a class="nav-link" href="products.html">Venta de equipos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="compra.html">Compra de equipos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Reparaciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Conocenos</a></li>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar__links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Venta de equipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compra.html">Compra de equipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agendaReparacion.html">Reparaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Conocenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shoppingCart.html">
+                            Mi carrito <span class="material-symbols-outlined align-middle"
+                                aria-hidden="true">shopping_bag</span>
+                        </a>
+                    </li>
                 </ul>
-                <div class="d-flex d-lg-flex mx-auto justify-content-center navbar__actions">
-                    <a href="#" class="mx-auto ms-1"><span class="material-symbols-outlined">search</span></a>
-                    <a class="mx-auto" href="#"><span class="material-symbols-outlined">shopping_bag</span></a>
-                    <a class=" mx-auto me-1" href="#"><span class="material-symbols-outlined">person</span></a>
+                <div class="d-flex align-items-center navbar__actions">
+                    <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Registrate</a>
+                    <a class="nav-link to_action" href="LogInPage.html">Iniciar sesion</a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sidebar filtros -->
+            <aside class="col-md-3">
+                <div class="filters">
+                    <h5>Categoría</h5>
+                    <ul class="list-unstyled">
+                        <li><input type="radio" name="categoria" checked> iPhone</li>
+                        <li><input type="radio" name="categoria"> iMac</li>
+                        <li><input type="radio" name="categoria"> Macbook</li>
+                    </ul>
+
+                    <h5>Marcas</h5>
+                    <ul class="list-unstyled">
+                        <li><input type="checkbox"> Apple</li>
+                        <li><input type="checkbox"> Samsung</li>
+                        <li><input type="checkbox"> Huawei</li>
+                        <li><input type="checkbox"> Xiaomi</li>
+                        <li><input type="checkbox"> Motorola</li>
+                        <li><input type="checkbox"> Realme</li>
+                    </ul>
+
+                    <h5>Rango de precio</h5>
+                    <input type="range" class="form-range" min="0" max="60000" step="1000">
+                    <ul class="list-unstyled">
+                        <li><input type="radio" name="precio"> Todos los precios</li>
+                        <li><input type="radio" name="precio"> Menor a $10,000</li>
+                        <li><input type="radio" name="precio"> $10,000 - $20,000</li>
+                        <li><input type="radio" name="precio"> $20,000 - $30,000</li>
+                        <li><input type="radio" name="precio"> $40,000 - $50,000</li>
+                        <li><input type="radio" name="precio"> Arriba de $50,000</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Productos -->
+            <main class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <input type="text" id="buscador" class="form-control w-50" placeholder="Buscar...">
+                    <select class="form-select w-auto">
+                        <option>Popular</option>
+                        <option>Menor precio</option>
+                        <option>Mayor precio</option>
+                        <option>Mejor valorados</option>
+                    </select>
+                    <span>20/400 Resultados</span>
+                </div>
+
+                <div id="productList" class="row g-4">
+                    <!-- Productos dinámicos aquí -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer id="footer">
         <div class="container">
             <div class="row-footer">
@@ -100,6 +175,10 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <script src="../js/compra.js"></script>
+    <script>
+        obtenerDatos('http://127.0.0.1:5500/src/js/db.json');
+    </script>
+</body>
 </html>
