@@ -75,36 +75,37 @@
           </div>
           <div class="modal-body">
             <!-- Formulario para agregar una Venta -->
-           <form id="add-Product" onsubmit="onSubmit(event)">
-               <div class="mb-3">
+            <form id="add-Product">
+              <div class="mb-3">
                 <label for="brand" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="brand" placeholder="Marca" name="brand" />
-              </div>
-               <div class="mb-3">
-                <label for="model" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="model" placeholder="Modelo" name="model" />
+                <input type="text" class="form-control" id="brand" placeholder="Apple" name="brand" />
               </div>
               <div class="mb-3">
-                <label for="cellphoneStatus" class="form-label">Estado del equipo</label>
-                <input type="text" class="form-control" id="cellphoneStatus" placeholder="Estado de equipo" name="cellphoneStatus" />
+                <label for="model" class="form-label">Modelo</label>
+                <input type="text" class="form-control" id="model" placeholder="Iphone 14" name="model" />
               </div>
               <div class="mb-3">
-                <label for="description" class="form-label">Descripción</label>
-                <input type="text" class="form-control" id="description" placeholder="Descripción"
-                  name="description" />
+                <label for="productDescription" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="productDescription" placeholder="Iphone 14"
+                  name="productDescription" />
               </div>
               <div class="mb-3">
-                <label for="price" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="price" name="price" />
+                <label for="productCost" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="productCost" name="productCost" />
               </div>
               <div class="mb-3">
-                <label for="price" class="form-label">Costumer ID</label>
-                <input type="number" class="form-control" id="customerId" name="customerId" />
+                <label for="imageurl" class="form-label">Imagen</label>
+                <input class="form-control" type="text" id="imageurl" placeholder="https://..." />
               </div>
               <div class="mb-3">
-                <label for="product-image" class="form-label">Agregar imagen</label>
-                <input class="form-control" type="url" id="product-image" name="product-image"/>
-                <!-- <input class="form-control" type="file" accept="image/*" id="product-image" /> -->
+                <label for="status" class="form-label">Estatus</label>
+                <input type="text" class="form-control" id="status" name="status" placeholder="Activo" />
+              </div>
+              <div class="mb-3">
+                <label for="customerSelect" class="form-label">Cliente</label>
+                <select class="form-select" id="customerSelect" name="customerSelect">
+                  <option selected>Cargando clientes...</option>
+                </select>
               </div>
               <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
@@ -112,21 +113,21 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Ventas -->
     <div class="container mt-5">
-        <div class="row">
-            <!-- Listado de Ventas -->
-            <main class="container">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <input type="text" id="buscador" class="form-control w-50" placeholder="Buscar...">
-                </div>
+      <div class="row">
+        <!-- Listado de Ventas -->
+        <main class="container">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <input type="text" id="buscador" class="form-control w-50" placeholder="Buscar...">
+          </div>
 
-                <div id="product-list" class="row g-4 mb-5">
-                    <!-- Verntas dinámicos aquí -->
-                </div>
-            </main>
-        </div>
+          <div id="product-list" class="row g-4 mb-5">
+            <!-- Verntas dinámicos aquí -->
+          </div>
+        </main>
+      </div>
     </div>
   </div>
 
@@ -200,8 +201,11 @@
     integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
     crossorigin="anonymous"></script>
 
-  <!-- Custom scripts -->
-  <script src="../js/pruducts.js"></script>
+  <!-- Custom scripts 
+  <script src="../js/pruducts.js"></script>-->
+
+  <script src="../js/venta.js"></script>
+
 </body>
 
 </html>
