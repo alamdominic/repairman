@@ -1,38 +1,16 @@
-/* Importación de fuentes Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap');
-
-html,
-body {
+.content-wrapper {
     height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
+    margin: 20px auto;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.6;
-
+    color: #004f7a;
+    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-top: 20px;
-    /* mantiene margen superior */
-    margin-bottom: 20px;
-    /* para no pegarse abajo si quieres */
-    color: #004f7a;
 }
 
-/* Contenedor principal para que crezca y empuje el footer abajo */
-.content-wrapper {
-    flex: 1;
-}
-
-/* Estilo para títulos principales */
-h1 {
+.content-wrapper h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 36px;
@@ -41,8 +19,7 @@ h1 {
     color: #004f7a;
 }
 
-/* Sección de contenido con fondo blanco y sombras */
-section {
+.content-wrapper section {
     background: white;
     padding: 20px 30px;
     margin-bottom: 25px;
@@ -50,66 +27,58 @@ section {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para títulos secundarios y terciarios dentro de la sección */
-section h2,
-section h3 {
+.content-wrapper section h2,
+.content-wrapper section h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    /* Poppins Medium */
     color: #004f7a;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
 
-/* Títulos h2 con línea inferior */
-section h2 {
+.content-wrapper section h2 {
     font-size: 24px;
     border-bottom: 3px solid #a1d6e2;
     padding-bottom: 8px;
 }
 
-/* Títulos h3 */
-section h3 {
+.content-wrapper section h3 {
     font-size: 20px;
 }
 
-/* Párrafos y listas */
-section p,
-section ul {
+.content-wrapper section p,
+.content-wrapper section ul {
     font-size: 16px;
     line-height: 1.6;
     color: #333333;
 }
 
-/* Sangrías en listas, y márgenes internos */
-section ul {
+.content-wrapper section ul {
     padding-left: 20px;
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
 
-section ul ul {
+.content-wrapper section ul ul {
     margin-left: 20px;
 }
 
-section ul li {
+.content-wrapper section ul li {
     margin-bottom: 8px;
 }
 
-/* Estilos para enlaces con color y efecto hover */
-section a {
+.content-wrapper section a {
     color: #004f7a;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
 
-section a:hover,
-section a:focus {
+.content-wrapper section a:hover,
+.content-wrapper section a:focus {
     color: #007ab8;
     outline: none;
 }
 
-/* Ajuste para anclajes y navegación suave */
-:target {
+.content-wrapper :target {
     scroll-margin-top: 80px;
 }

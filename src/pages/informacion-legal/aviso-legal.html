@@ -5,43 +5,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aviso legal - Repairman</title>
-    <link rel="stylesheet" href="../../css/informacion-legal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/informacion-legal.css" />
 </head>
 
 <body>
+    <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-lg-0 navbar__links">
+                    <li class="nav-item"><a class="nav-link" href="../products.html">Venta de equipos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../compra.html">Compra de equipos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Reparaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">Conócenos</a></li>
+                </ul>
+                <div class="d-flex d-lg-flex mx-auto justify-content-center navbar__actions">
+                    <a href="#" class="mx-auto ms-1"><span class="material-symbols-outlined">search</span></a>
+                    <a class="mx-auto" href="#"><span class="material-symbols-outlined">shopping_bag</span></a>
+                    <a class="mx-auto me-1" href="#"><span class="material-symbols-outlined">person</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="content-wrapper" style="max-width: 900px; margin: 0 auto; padding: 20px;">
-        <h1>Aviso Legal</h1>
+        <main>
+            <section id="aviso-legal">
+                <h1>Aviso Legal</h1>
 
-        <section id="aviso-legal">
-            <p>El presente sitio web es operado por Repairman, con domicilio en Puebla, México, reconocido proveedor de
-                servicios de reparación, compra y venta de celulares.</p>
+                <p>El presente sitio web es operado por Repairman, con domicilio en Puebla, México, reconocido proveedor
+                    de
+                    servicios de reparación, compra y venta de celulares.</p>
 
-            <h2>Propiedad intelectual</h2>
-            <p>Todos los contenidos incluidos en esta web, incluyendo textos, imágenes, logotipos, diseños, gráficos y
-                software, son propiedad de Repairman o cuentan con licencia para su uso. Queda prohibida la reproducción
-                total o parcial sin autorización previa por escrito.</p>
+                <h2>Propiedad intelectual</h2>
+                <p>Todos los contenidos incluidos en esta web, incluyendo textos, imágenes, logotipos, diseños, gráficos
+                    y
+                    software, son propiedad de Repairman o cuentan con licencia para su uso. Queda prohibida la
+                    reproducción
+                    total o parcial sin autorización previa por escrito.</p>
 
-            <h2>Limitación de responsabilidad</h2>
-            <p>Repairman no se responsabiliza por daños o perjuicios que puedan derivarse del uso inadecuado o falta de
-                disponibilidad del sitio web. Tampoco garantiza la ausencia de errores en la información proporcionada.
-            </p>
+                <h2>Limitación de responsabilidad</h2>
+                <p>Repairman no se responsabiliza por daños o perjuicios que puedan derivarse del uso inadecuado o falta
+                    de
+                    disponibilidad del sitio web. Tampoco garantiza la ausencia de errores en la información
+                    proporcionada.
+                </p>
 
-            <h2>Enlaces a terceros</h2>
-            <p>Este sitio puede contener enlaces a webs externas. No somos responsables del contenido o políticas de
-                privacidad de terceros.</p>
+                <h2>Enlaces a terceros</h2>
+                <p>Este sitio puede contener enlaces a webs externas. No somos responsables del contenido o políticas de
+                    privacidad de terceros.</p>
 
-            <h2>Legislación aplicable</h2>
-            <p>Estos términos se rigen por las leyes mexicanas. Cualquier conflicto será sometido a la jurisdicción de
-                los tribunales competentes en Puebla.</p>
+                <h2>Legislación aplicable</h2>
+                <p>Estos términos se rigen por las leyes mexicanas. Cualquier conflicto será sometido a la jurisdicción
+                    de
+                    los tribunales competentes en Puebla.</p>
 
-            <h2>Contacto</h2>
-            <p>Para consultas legales, puede contactarnos en:</p>
-            <ul>
-                <li>Email: <a href="mailto:contacto.repairman@gmail.com">contacto.repairman@gmail.com</a></li>
-                <li>Teléfono: <a href="tel:+522213601451">+52 221 360 1451</a></li>
-            </ul>
-        </section>
+                <h2>Contacto</h2>
+                <p>Para consultas legales, puede contactarnos en:</p>
+                <ul>
+                    <li>Email: <a href="mailto:contacto.repairman@gmail.com">contacto.repairman@gmail.com</a></li>
+                    <li>Teléfono: <a href="tel:+522213601451">+52 221 360 1451</a></li>
+                </ul>
+            </section>
+        </main>
     </div>
 
     <footer id="footer">
@@ -105,6 +141,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
