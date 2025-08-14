@@ -75,24 +75,36 @@
           </div>
           <div class="modal-body">
             <!-- Formulario para agregar una Venta -->
-            <form id="add-Product">
-              <div class="mb-3">
-                <label for="productName" class="form-label">Nombre del equipo</label>
-                <input type="text" class="form-control" id="productName" placeholder="Iphone 14" name="productName" />
+           <form id="add-Product" onsubmit="onSubmit(event)">
+               <div class="mb-3">
+                <label for="brand" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="brand" placeholder="Marca" name="brand" />
+              </div>
+               <div class="mb-3">
+                <label for="model" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="model" placeholder="Modelo" name="model" />
               </div>
               <div class="mb-3">
-                <label for="productDescription" class="form-label">Descripción</label>
-                <input type="text" class="form-control" id="productDescription" placeholder="Iphone 14"
-                  name="productDescription" />
+                <label for="cellphoneStatus" class="form-label">Estado del equipo</label>
+                <input type="text" class="form-control" id="cellphoneStatus" placeholder="Estado de equipo" name="cellphoneStatus" />
               </div>
               <div class="mb-3">
-                <label for="productCost" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="productCost" name="productCost" />
+                <label for="description" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="description" placeholder="Descripción"
+                  name="description" />
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="price" name="price" />
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Costumer ID</label>
+                <input type="number" class="form-control" id="customerId" name="customerId" />
               </div>
               <div class="mb-3">
                 <label for="product-image" class="form-label">Agregar imagen</label>
-                <!-- <input class="form-control" type="file" id="product-image"> -->
-                <input class="form-control" type="file" accept="image/*" id="product-image" />
+                <input class="form-control" type="url" id="product-image" name="product-image"/>
+                <!-- <input class="form-control" type="file" accept="image/*" id="product-image" /> -->
               </div>
               <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
