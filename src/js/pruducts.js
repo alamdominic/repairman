@@ -148,11 +148,11 @@ const getProducts = async () => {
            <img src="${product.url}" class="card-img-top"/>
            <div class="card-body d-grid text-center">
              
-               <h4>${product.productName}</h4>
-               <strong>$ ${product.productCost}</strong>
+               <h4>${product.brand} - ${product.model}</h4>
+               <strong>$ ${product.price}</strong>
              
              <p class="card-text text-start">
-               ${product.productDescription}
+               ${product.description}
              </p>
              <button id="addProduct" class="btn btn-primary btn-sm">Comprar</button>
            </div>
