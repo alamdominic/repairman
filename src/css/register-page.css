@@ -110,7 +110,6 @@ input.form-control:focus {
     justify-content: center;
     color: var(--color-gray);
     z-index: 11;
-    /* Para estar sobre inputs e iconos */
 }
 
 .password-toggle-btn img.eye-icon {

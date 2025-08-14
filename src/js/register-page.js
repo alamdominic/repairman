@@ -6,11 +6,11 @@ document.querySelectorAll('.password-toggle-btn').forEach(button => {
 
         if (input.type === 'password') {
             input.type = 'text';
-            eyeImg.src = 'src/img/eye_password_hide.svg'; // ojo abierto
+            eyeImg.src = '../img/eye_password_hide.svg';
             eyeImg.alt = 'Ocultar contraseña';
         } else {
             input.type = 'password';
-            eyeImg.src = 'src/img/eye_password_show.svg'; // ojo cerrado
+            eyeImg.src = '../img/eye_password_show.svg';
             eyeImg.alt = 'Mostrar contraseña';
         }
     });
