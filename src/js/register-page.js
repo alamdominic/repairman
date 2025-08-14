@@ -18,7 +18,7 @@ document.querySelectorAll('.password-toggle-btn').forEach(button => {
 
 // Validación al enviar formulario
 document.getElementById('register-form').addEventListener('submit', e => {
-    // e.preventDefault();
+    e.preventDefault();
     const form = e.target;
 
     // Validación HTML5 estándar
@@ -57,8 +57,8 @@ document.getElementById('register-form').addEventListener('submit', e => {
         headers: {
             'Content-Type': 'application/json'
         },
-        // body: JSON.stringify(user)
-        body: user
+        body: JSON.stringify(user)
+        // body: user
     })
         .then(response => {
             return response.json();
