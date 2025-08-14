@@ -135,6 +135,25 @@ body {
 }
 
 /* Hero section */
+
+/* Hero image */
+#id-section {
+  position: relative;
+  z-index: 1;
+}
+#text-div {
+  position: relative;
+  z-index: 3;
+}
+#id-img {
+   position: absolute;
+  bottom: -20px;
+  left: revert-lawyer;
+  z-index: 2;
+  width: 600px;
+}
+
+/*  */
 .hero-section {
     background: linear-gradient(to bottom, #a2c5de, #003b6f);
     color: white;
