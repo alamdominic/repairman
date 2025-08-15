@@ -36,6 +36,7 @@ const showProducts = async (event) => {
                                 <p class="card-text">
                                     ${sale.description}
                                 </p>
+                                <p><strong>Estado ${sale.cellphoneStatus} </p></strong>
                                 <p>Vendido por <strong> ${customer.firstname} ${customer.lastname} </strong></p>
                                 <button id="addProduct" class="btn btn-primary btn-sm" name="newId" value="value="${sale.salesID}"" onclick="onClick(event)">Agregar al carrito</button>
                             </div>

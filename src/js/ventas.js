@@ -77,6 +77,7 @@ const showProducts = async (event) => {
                                 <p class="card-text">
                                     ${sale.description}
                                 </p>
+                                <p><strong>Estado ${sale.cellphoneStatus} </p></strong>
                                 <p>Vendido por <strong> ${customer.firstname} ${customer.lastname} </strong></p>
                             </div>
                         </div>`;
