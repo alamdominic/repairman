@@ -1,339 +1,226 @@
-@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
-
-:root {
-  --primary-color: #000;
-  --hover-color: #666;
-  --background-color: #fff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: var(--background-color);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /*padding: 1rem 2rem;*/
-    background-color: var(--background-color);
-    border-bottom: 1px solid #e5e5e5;
-    position: sticky;
-    top: 0;
-}
-
-.navbar__logo span {
-    font-weight: 500;
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
-    color: var(--primary-color);
-}
-
-.navbar__links {
-    display: flex;
-    list-style: none;
-    gap: 1.4rem;
-}
-
-.navbar__links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.navbar__links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: var(--primary-color);
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-}
-
-.navbar__links a:hover {
-    color: var(--hover-color);
-}
-
-.navbar__links a:hover::after {
-    width: 100%;
-}
-
-.navbar__actions {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.navbar__actions a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.navbar__actions a:hover {
-    color: var(--hover-color);
-}
-
-/* Estilos base para los enlaces Iniciar Sesion y Registro */
-.to_action {
-  position: relative;
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1rem;
-  padding-bottom: 5px;
-  transition: color 0.3s ease;
-}
-
-/* El pseudoelemento que será la línea */
-.to_action::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0; /* La línea inicia desde el borde izquierdo */
-  width: 0; /* Por defecto, la línea no tiene ancho */
-  height: 1px;
-  background-color: #007bff;
-  transition: width 0.3s ease; /* Transición solo para el ancho */
-}
-
-/* Efecto hover -- Registrate, Iniciar Sesion */
-.to_action:hover::after {
-  width: 100%; /* Al hacer hover, la línea se expande al 100% */
-}
-#efecto_navbar {
-  /* Establece un color de fondo base semitransparente */
-  background-color: rgba(255, 255, 255, 0.6); 
-  backdrop-filter: blur(5px); 
-  /* Asegura que el texto y los enlaces tengan un contraste adecuado */
-  color: #000;
-}
-.bg-body-tertiary {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-}
-.navbar {
-  backdrop-filter: blur(20px);
-}
-/* Diego */
-#sobreNosotros {
-    background-color: #000000;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#sobreNosotros h2,
-#sobreNosotros h3 {
-    color: #e0e0e0;
-    font-weight: 700;
-}
-
-#sobreNosotros p,
-#sobreNosotros ul li {
-    color: #e0e0e0;
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-}
-
-#sobreNosotros ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-#sobreNosotros button.btn-primary {
-    background-color: #004f7a;
-    border-color: #004f7a;
-    color: white;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-}
-
-#sobreNosotros button.btn-primary:hover,
-#sobreNosotros button.btn-primary:focus {
-    background-color: #003b5a;
-    border-color: #003b5a;
-    color: white;
-}
-
-#sobreNosotros img {
-    border-radius: 0.25rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    max-height: 350px;
-    object-fit: cover;
-}
-/* Diego */
-
-/* Eduardo - Footer*/
-#footer {
-  background-color: #004f7a;
-}
-
-.social-media {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #004f7a;
-  opacity: 0.8;
-}
-
-#facebook {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/250px-Logo_de_Facebook.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-#instagram {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-#youtube {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-#x {
-  background-image: url("https://cdn.cms-twdigitalassets.com/content/dam/legal-twitter/sharing-card.png.twimg.768.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-@keyframes Entrada {
-    from{
-        transform: translateX(-200%);
+    :root {
+      --primary-color: #1a365d;
+      --secondary-color: #2d3748;
+      --accent-color: #4a90a4;
+      --text-light: #e2e8f0;
+      --text-dark: #2d3748;
+      --bg-light: #f7fafc;
+      --border-color: #e2e8f0;
     }
-    to{
-        transform: translateX(0);
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-dark);
     }
-}
 
-#sucursales{
-    animation: Entrada .9s ease;
-}
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.card-img-top {
-  transition: transform 0.3s ease;
-}
-.card:hover .card-img-top {
-  transform: scale(1.02);
-}
-.embed-responsive-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
-}
-.embed-responsive:hover .embed-responsive-item {
-  transform: scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/*Media queries Sucursales*/
-@media (min-width: 768px) {
-    .col-md-6 .embed-responsive {
-        width: 100%;
-        /* ancho del contenedor del iframe*/
-        height: 420px;
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: var(--text-light);
+      min-height: 50vh;
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
     }
-    /* Aplicamos directamente al iframe */
-    .col-md-6 .embed-responsive-item {
-        width: 100%;
-        /* ancho del iframe tomará el 100% del ancho del contenedor */
-        height: 420px;
+    
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: -1px;
+      margin-bottom: 2rem;
     }
-}
-@media (max-width: 768px) {
-    /* Contenedor del iframe */
-    .embed-responsive {
-        width: 100%;
-        /* Asegura que ocupe todo el ancho de su columna */
-        max-width: 100%;
-        /* evita desbordamiento si hubiera padding/márgenes inesperados */
-        height: 320px;
+
+    .hero-text p{
+      font-size: 30px;
+      line-height: 1.8;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    /* El iframe tomará el 100% del ancho */
-    .embed-responsive-item {
-        width: 100%;
-        height: 100%;
-        /* Asegura que la altura se ajuste correctamente */
+
+    .btn-custom {
+      background-color: var(--accent-color);
+      border: none;
+      padding: 12px 30px;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: all 0.3s ease;
     }
-}
 
-#misionVision {
-  background-color: #f9f9f9;
-  padding: 5rem 5rem;
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #111;
-  animation: Entrada 0.8s ease;
-}
+    .btn-custom:hover {
+      background-color: #3a7a8a;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(74, 144, 164, 0.3);
+    }
 
-#misionVision h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-  border-left: 4px solid #004f7a;
-  padding-left: 0.75rem;
-}
+    .info-section {
+      background-color: var(--bg-light);
+      padding: 80px 0;
+    }
 
-#misionVision h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #004f7a;
-}
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
 
-#misionVision p {
-  font-size: 1.1rem;
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
-  color: #333;
-}
+    .feature-list li {
+      padding: 10px 0;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+    }
 
-#misionVision strong {
-  color: #000;
-  font-weight: 600;
-}
+    .feature-list li::before {
+      content: '✓';
+      color: var(--accent-color);
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 1.2rem;
+    }
 
-#misionVision ul {
-  padding-left: 1.5rem;
-  margin-top: 1rem;
-}
+    .section-title {
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--primary-color);
+      margin-bottom: 3rem;
+      position: relative;
+    }
 
-#misionVision ul li {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #444;
-  position: relative;
-  padding-left: 1.2rem;
-}
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
 
-#misionVision ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #004f7a;
-  font-weight: bold;
-}
+    .card-location {
+      border: none;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
 
+    .card-location:hover {
+      transform: translateY(-5px);
+    }
 
+    .card-location img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .story-section {
+      padding: 80px 0;
+      background-color: white;
+    }
+
+    .story-content {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+    }
+
+    .story-content h2 {
+      color: var(--primary-color);
+      font-weight: 400;
+      margin-bottom: 2rem;
+      font-size: 2.4rem;
+    }
+
+    .story-content h3 {
+      color: var(--secondary-color);
+      font-weight: 500;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.9rem;
+    }
+
+    .values-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .values-list li {
+      margin-bottom: 1.5rem;
+      padding: 20px;
+      background-color: var(--bg-light);
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-color);
+      font-size: 1.4rem;
+    }
+
+    .values-list strong {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+
+    .team-section {
+      background-color: var(--bg-light);
+      padding: 80px 0;
+      margin-top: -100px;
+      font-size: 2rem;
+    }
+
+    .team-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      border: none;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .team-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 4px solid var(--accent-color);
+    }
+
+    .team-card h5 {
+      color: var(--primary-color);
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      
+      .hero-text {
+        font-size: 1.1rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+    }
