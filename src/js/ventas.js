@@ -44,7 +44,7 @@ const showProducts = async (event) => {
     const url = 'http://localhost:8080/api/v1/repairman/customers'; // La URL para obtener todos los datos
 
     try {
-        event.preventDefault();
+        // event.preventDefault();
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const customers = await res.json();
