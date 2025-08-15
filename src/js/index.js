@@ -47,7 +47,7 @@ function obtenerDatos(url) { // Petición GET
     .catch(error => console.error('Error:', error));
 }
 // Funcion para añadir los productos al localStorage
-function addToCarrito(producto){
+export function addToCarrito(producto){
     // json.parse Intenta obtener el 'carrito' del localStorage y convertirlo en un arreglo. Si no existe o está vacío, entonces usa un arreglo vacío como valor inicial
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 

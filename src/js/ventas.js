@@ -1,5 +1,10 @@
-const onClick = () => {
-    console.log("hola")
+// import { addToCarrito } from "./index";
+const onClick = (event) => {
+    const id = document.getElementsByName("newId");
+    id.value;
+    // const formData = new FormData(event.target);
+    // const newId = Object.fromEntries(formData.entries());
+    console.log(id);
 }
 
 const showProducts = async (event) => {
@@ -21,7 +26,6 @@ const showProducts = async (event) => {
     
         let fragment = document.createDocumentFragment();
         products.map(product => {
-            console.log(product)
             let div = document.createElement("div");
             let template = `<div class="card" style="width: 18rem">
            <img src="${product.imageUrl}" class="card-img-top"/>
@@ -33,7 +37,7 @@ const showProducts = async (event) => {
              <p class="card-text text-center">
                ${product.description}
              </p>
-             <button id="addProduct" class="btn btn-primary btn-sm" onclick="onClick()">Comprar</button>
+             <button id="addProduct" class="btn btn-primary btn-sm" name="newId" value="${product.salesID}" onclick="onClick(event)">Comprar</button>
            </div>
          </div>`;
          div.innerHTML = template;
