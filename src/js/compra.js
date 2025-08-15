@@ -58,19 +58,25 @@ const showProducts = async (event) => {
 
 // Función para filtrar en tiempo real
 function filtrarProductos(texto) {
-    const filtro = texto.toLowerCase();
-    const filtrados = productosData.filter(producto =>
-        producto.productName.toLowerCase().includes(filtro)
-    );
-    mostrarProductos(filtrados);
+    const productCards = document.querySelectorAll('#product-list .col-sm-6');
+
+    productCards.forEach(card => {
+        // Obtener el texto completo de la tarjeta (título, descripción, etc.)
+        const cardText = card.textContent.toLowerCase();
+
+        // Comprobar si el texto de la tarjeta incluye el término de búsqueda
+        if (cardText.includes(texto)) {
+            card.style.display = 'block'; // O 'flex' si tu contenedor principal es d-flex
+        } else {
+            card.style.display = 'none';
+        }
+    });
 }
 
 // Escuchar evento del input
-document.addEventListener('DOMContentLoaded', () => {
-    const buscador = document.querySelector('#buscador');
-    buscador.addEventListener('input', e => {
-        filtrarProductos(e.target.value);
-    });
+document.getElementById('buscador').addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    filtrarProductos(searchTerm);
 });
 
 window.onload = () => {
