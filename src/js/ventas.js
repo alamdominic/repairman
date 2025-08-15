@@ -1,10 +1,9 @@
-// import { addToCarrito } from "./index";
-const onClick = (event) => {
+//import { addToCarrito } from "./index";
+const onClick = async (event) => {
     const id = document.getElementsByName("newId");
-    id.value;
-    // const formData = new FormData(event.target);
-    // const newId = Object.fromEntries(formData.entries());
-    console.log(id);
+   
+    const saleid = document.getElementsByName("newId")[0].value;  // Guardamos el id de saleID
+
 }
 
 const showProducts = async (event) => {
@@ -33,7 +32,7 @@ const showProducts = async (event) => {
              
                <h4>${product.brand} - ${product.model}</h4>
                <strong>$ ${product.price}</strong>
-             
+
              <p class="card-text text-center">
                ${product.description}
              </p>
