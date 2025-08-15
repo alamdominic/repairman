@@ -19,8 +19,8 @@ function addToCarrito(producto){
 }
 
 const onClick = async (event) => {
-    const saleid = document.getElementsByName("newId")[0].value;  // Guardamos el id de saleID
-    
+    const saleid = event.target.value;
+    console.log(saleid);
     const url =`http://localhost:8080/api/v1/repairman/sales/${saleid}`;
 
     const res = await fetch(url);
@@ -55,7 +55,7 @@ const showProducts = async (event) => {
 
     
         let fragment = document.createDocumentFragment();
-        products.map(product => {
+        products.forEach(product => {
             let div = document.createElement("div");
             let template = `<div class="card" style="width: 18rem">
            <img src="${product.imageUrl}" class="card-img-top"/>
