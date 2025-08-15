@@ -1,0 +1,314 @@
+/* customers-table.css */
+
+.main-content {
+    margin-top: 120px;
+    margin-bottom: 60px;
+    padding: 20px 0;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.table-header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.table-header .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.table-header .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#refreshIcon {
+    font-size: 1.2rem;
+    transition: transform 0.5s ease;
+}
+
+#refreshIcon.spinning {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Estados de carga y error */
+.loading-state,
+.error-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.error-state {
+    color: #dc3545;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.error-state h3 {
+    color: #dc3545;
+    margin-bottom: 10px;
+}
+
+.error-state p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+.table-responsive {
+    border-radius: 12px 12px 0 0;
+}
+
+/* Tabla estilo Excel */
+.excel-table {
+    margin: 0;
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+}
+
+.excel-table thead {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.excel-table thead th {
+    background: #e9ecef;
+    color: #495057;
+    font-weight: 600;
+    text-align: left;
+    padding: 15px 20px;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.excel-table thead th:last-child {
+    border-right: none;
+}
+
+.excel-table tbody tr {
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s ease;
+}
+
+.excel-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.excel-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+.excel-table tbody tr:nth-child(even):hover {
+    background-color: #f1f3f4;
+}
+
+.excel-table tbody td {
+    padding: 12px 20px;
+    border-right: 1px solid #dee2e6;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.excel-table tbody td:last-child {
+    border-right: none;
+}
+
+/* Estilos específicos para cada columna */
+.excel-table tbody td:nth-child(1) {
+    /* ID */
+    font-weight: 600;
+    color: #007bff;
+    text-align: center;
+    width: 80px;
+}
+
+.excel-table tbody td:nth-child(2) {
+    /* Nombre */
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.excel-table tbody td:nth-child(3) {
+    /* Usuario */
+    font-family: 'Courier New', monospace;
+    color: #6c757d;
+    background-color: rgba(108, 117, 125, 0.1);
+    font-size: 0.85rem;
+}
+
+.excel-table tbody td:nth-child(4) {
+    /* Email */
+    color: #007bff;
+    font-size: 0.85rem;
+}
+
+.excel-table tbody td:nth-child(5) {
+    /* Teléfono */
+    font-family: 'Courier New', monospace;
+    color: #28a745;
+    font-weight: 500;
+}
+
+/* Información de la tabla */
+.table-info {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: right;
+}
+
+#recordCount {
+    font-weight: 500;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 100px;
+        padding: 10px 0;
+    }
+
+    .table-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .table-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .table-container {
+        margin: 0 10px;
+    }
+
+    .excel-table {
+        font-size: 0.8rem;
+    }
+
+    .excel-table thead th,
+    .excel-table tbody td {
+        padding: 10px 12px;
+    }
+
+    .excel-table tbody td:nth-child(3),
+    .excel-table tbody td:nth-child(4) {
+        font-size: 0.75rem;
+    }
+
+    .table-info {
+        text-align: center;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .excel-table thead th,
+    .excel-table tbody td {
+        padding: 8px 10px;
+    }
+
+    .excel-table {
+        font-size: 0.75rem;
+    }
+}
+
+/* Animación de entrada */
+.table-container {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efectos de hover mejorados */
+.excel-table tbody tr {
+    cursor: pointer;
+}
+
+.excel-table tbody tr:hover td {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.excel-table tbody tr:hover td:nth-child(1) {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #0056b3;
+}
+
+/* Scroll personalizado para la tabla */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
