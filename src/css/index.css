@@ -153,7 +153,7 @@ body {
   width: 600px;
 }
 
-/*  */
+/* ------Hero Section ------*/
 .hero-section {
     background: linear-gradient(to bottom, #a2c5de, #003b6f);
     color: white;
@@ -163,16 +163,27 @@ body {
 }
 
 .heroSectionDiv {
-    padding-top: 185px; /* Ajusta este valor para bajar el texto */
+    padding-top: 70px; /* Ajusta este valor para bajar el texto */
+}
+
+.hero-section h1 {
+    font-size: 7rem; /* Ya lo tienes grande */
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 80px; /* Baja un poco para que no se pegue al navbar */
+    margin-bottom: 40px; /* Espacio con lo demás */
+    z-index: 3; /* Asegura que esté sobre la imagen */
+    position: relative;
 }
 
 /* El resto de tu CSS se mantiene igual */
 .hero-section h1 {
-    font-size: 5rem;
+    font-size: 10rem;
 }
 
 .hero-section p {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .hero-section ul li {
@@ -185,7 +196,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    max-width: 52%;
+    max-width: 70%;
     height: auto;
     border-radius: 10px;
 }
@@ -202,6 +213,10 @@ body {
 
 .btn-light {
     font-weight: bold;
+
+    width: 20%;       /* ancho fijo */
+    margin: 0 auto;   /* centrado horizontal */
+    text-align: center;
 }
 
 /* Seminuevos */
