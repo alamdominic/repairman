@@ -1,69 +1,54 @@
-function obtenerDatos(url) {
-    fetch(url)
-        .then(respuesta => respuesta.json())
-        .then(datos => {
-            const divProductos = document.getElementById('productList');
-            divProductos.innerHTML = '';
+const showProducts = async (event) => {
+    const productList = document.getElementById("product-list");
+    const url = 'http://localhost:8080/api/v1/repairman/customers'; // La URL para obtener todos los datos
+    
+    try {
+        event.preventDefault();
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const customers = await res.json(); 
+        console.log(customers); 
 
-            for (const producto of datos.productos) {
-                const productCol = document.createElement('div');
-                productCol.classList.add('col-12', 'col-md-4', 'mb-4');
+        if (!Array.isArray(customers) || customers.length === 0) {
+            let h1 = document.createElement("h1");
+            h1.textContent = "Aun no hay nada aquí, usa el boton Agregar.";
+            productList.appendChild(h1);
+            return;
+        }
 
-                const cardHTML = `
-                    <div class="card product-card h-100 text-center shadow-sm">
-                        <img src="${producto.imagen}" class="card-img-top" alt="${producto.productName}">
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">${producto.productName}</h6>
-                            <div class="rating">★★★★☆ <span>(${producto.reviews})</span></div>
-                            <p class="text-muted text-decoration-line-through">$${producto.precioOriginal}</p>
-                            <p class="price">$${producto.precioFinal}</p>
-                            <button class="btn btn-primary btn-sm">Comprar</button>
+        let fragment = document.createDocumentFragment();
+
+        // Itera sobre la lista de clientes
+        customers.forEach(customer => {
+            // para cada cliente, itera sobre su lista de ventas
+            if (customer.sales && customer.sales.length > 0) {
+                customer.sales.forEach(sale => {
+                    let div = document.createElement("div");
+                    let template = `
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100">
+                            <img src="${sale.imageUrl}" class="card-img-top" alt="${sale.description}"/>
+                            <div class="card-body">
+                                <h4 class="card-title">${sale.brand} - ${sale.model}</h4>
+                                <strong>$ ${sale.price}</strong>
+                                <p class="card-text">
+                                    ${sale.description}
+                                </p>
+                                <p>Vendido por <strong> ${customer.firstname} ${customer.lastname} </strong></p>
+                            </div>
                         </div>
-                    </div>
-                `;
-
-                productCol.innerHTML = cardHTML;
-                divProductos.appendChild(productCol);
+                    </div>`;
+                    div.innerHTML = template;
+                    div.classList.add("px-3");
+                    fragment.appendChild(div);
+                });
             }
-        })
-        .catch(error => console.error('Error:', error));
-}
+        });
+        
+        productList.appendChild(fragment);
 
-let productosData = []; // Guardaremos aquí todos los productos para filtrar después
-
-function obtenerDatos(url) {
-    fetch(url)
-        .then(respuesta => respuesta.json())
-        .then(datos => {
-            productosData = datos.productos; // Guardamos todos los productos
-            mostrarProductos(productosData); // Mostramos todos al inicio
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-function mostrarProductos(lista) {
-    const divProductos = document.getElementById('productList');
-    divProductos.innerHTML = '';
-
-    for (const producto of lista) {
-        const productCol = document.createElement('div');
-        productCol.classList.add('col-12', 'col-md-4', 'mb-4');
-
-        const cardHTML = `
-            <div class="card product-card h-100 text-center shadow-sm">
-                <img src="${producto.imagen}" class="card-img-top" alt="${producto.productName}">
-                <div class="card-body">
-                    <h6 class="card-title mb-1">${producto.productName}</h6>
-                    <div class="rating">★★★★☆ <span>(${producto.reviews})</span></div>
-                    <p class="text-muted text-decoration-line-through">$${producto.precioOriginal}</p>
-                    <p class="price">$${producto.precioFinal}</p>
-                    <button class="btn btn-primary btn-sm">Comprar</button>
-                </div>
-            </div>
-        `;
-
-        productCol.innerHTML = cardHTML;
-        divProductos.appendChild(productCol);
+    } catch (e) {
+        console.error(e);
     }
 }
 
@@ -83,3 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         filtrarProductos(e.target.value);
     });
 });
+
+window.onload = () => {
+    showProducts(event);
+}
