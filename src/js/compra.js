@@ -23,9 +23,11 @@ const showProducts = async (event) => {
             // para cada cliente, itera sobre su lista de ventas
             if (customer.sales && customer.sales.length > 0) {
                 customer.sales.forEach(sale => {
-                    let div = document.createElement("div");
-                    let template = `
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    const colDiv = document.createElement("div");
+                    colDiv.classList.add("col-sm-6", "col-md-4", "col-lg-3", "px-3");
+
+                    // Define el template de la tarjeta sin el div de la columna
+                    const cardTemplate = `
                         <div class="card h-100">
                             <img src="${sale.imageUrl}" class="card-img-top" alt="${sale.description}"/>
                             <div class="card-body">
@@ -35,12 +37,14 @@ const showProducts = async (event) => {
                                     ${sale.description}
                                 </p>
                                 <p>Vendido por <strong> ${customer.firstname} ${customer.lastname} </strong></p>
+                                <button id="addProduct" class="btn btn-primary btn-sm" name="newId" value="value="${sale.salesID}"" onclick="onClick(event)">Agregar al carrito</button>
                             </div>
-                        </div>
-                    </div>`;
-                    div.innerHTML = template;
-                    div.classList.add("px-3");
-                    fragment.appendChild(div);
+                        </div>`;
+                    // Asigna el template al innerHTML del div de la columna
+                    colDiv.innerHTML = cardTemplate;
+
+                    // Agrega el div de la columna al DocumentFragment
+                    fragment.appendChild(colDiv);
                 });
             }
         });
