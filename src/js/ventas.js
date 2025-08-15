@@ -41,7 +41,7 @@ const showProducts = async (event) => {
     const productList = document.getElementById("product-list");
     const url = `http://localhost:8080/api/v1/repairman/sales`;
     try {
-        event.preventDefault();
+        // event.preventDefault();
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const products = await res.json();
