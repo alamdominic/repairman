@@ -1,3 +1,7 @@
+const onClick = () => {
+    console.log("hola")
+}
+
 const showProducts = async (event) => {
     const productList = document.getElementById("product-list");
     const url = `http://localhost:8080/api/v1/repairman/sales`;
@@ -14,8 +18,10 @@ const showProducts = async (event) => {
             return;
         }
 
+    
         let fragment = document.createDocumentFragment();
         products.map(product => {
+            console.log(product)
             let div = document.createElement("div");
             let template = `<div class="card" style="width: 18rem">
            <img src="${product.imageUrl}" class="card-img-top"/>
@@ -27,10 +33,11 @@ const showProducts = async (event) => {
              <p class="card-text text-center">
                ${product.description}
              </p>
-             <button id="addProduct" class="btn btn-primary btn-sm">Comprar</button>
+             <button id="addProduct" class="btn btn-primary btn-sm" onclick="onClick()">Comprar</button>
            </div>
          </div>`;
          div.innerHTML = template;
+         div.classList.add("px-3");
          productList.appendChild(div);
 
         //  //Seleccionar el boton con id addProduct -- incompleto
