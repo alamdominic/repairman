@@ -42,13 +42,13 @@ const onClick = async (event) => {
 const showProducts = async (event) => {
     const productList = document.getElementById("product-list");
     const url = 'http://localhost:8080/api/v1/repairman/customers'; // La URL para obtener todos los datos
-    
+
     try {
         // event.preventDefault();
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const customers = await res.json(); 
-        console.log(customers); 
+        const customers = await res.json();
+        console.log(customers);
 
         if (!Array.isArray(customers) || customers.length === 0) {
             let h1 = document.createElement("h1");
@@ -77,6 +77,7 @@ const showProducts = async (event) => {
                                 <p class="card-text">
                                     ${sale.description}
                                 </p>
+                                <p><strong>Estado ${sale.cellphoneStatus} </p></strong>
                                 <p>Vendido por <strong> ${customer.firstname} ${customer.lastname} </strong></p>
                             </div>
                         </div>`;
@@ -88,7 +89,7 @@ const showProducts = async (event) => {
                 });
             }
         });
-        
+
         productList.appendChild(fragment);
 
     } catch (e) {
@@ -96,6 +97,26 @@ const showProducts = async (event) => {
     }
 }
 
+// Buscador
+document.getElementById('buscador').addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    filterProducts(searchTerm);
+});
+function filterProducts(searchTerm) {
+    const productCards = document.querySelectorAll('#product-list .col-sm-6');
+
+    productCards.forEach(card => {
+        // Obtener el texto completo de la tarjeta (título, descripción, etc.)
+        const cardText = card.textContent.toLowerCase();
+
+        // Comprobar si el texto de la tarjeta incluye el término de búsqueda
+        if (cardText.includes(searchTerm)) {
+            card.style.display = 'block'; // O 'flex' si tu contenedor principal es d-flex
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
 window.onload = () => {
     showProducts(event);
 }
