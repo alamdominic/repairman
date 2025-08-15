@@ -137,16 +137,10 @@ body {
 /* Hero section */
 
 /* Hero image */
-#id-section {
-  position: relative;
-  z-index: 1;
-}
-#text-div {
-  position: relative;
-  z-index: 3;
-}
+
+
 #id-img {
-   position: absolute;
+  position: absolute;
   bottom: -20px;
   left: revert-lawyer;
   z-index: 2;
@@ -162,33 +156,29 @@ body {
     overflow: hidden;
 }
 
-.heroSectionDiv {
-    padding-top: 70px; /* Ajusta este valor para bajar el texto */
-}
-
 .hero-section h1 {
-    font-size: 7rem; /* Ya lo tienes grande */
+    font-size: 8rem; 
     font-weight: bold;
-    text-align: center; /* Centra el texto */
-    width: 100%; /* Ocupa todo el ancho */
-    margin-top: 80px; /* Baja un poco para que no se pegue al navbar */
-    margin-bottom: 40px; /* Espacio con lo demás */
-    z-index: 3; /* Asegura que esté sobre la imagen */
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    z-index: 3; 
     position: relative;
-}
-
-/* El resto de tu CSS se mantiene igual */
-.hero-section h1 {
-    font-size: 10rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .hero-section p {
     font-size: 2rem;
 }
 
+.fragen{
+  font-size: rem;
+  font-weight: bold;
+}
 .hero-section ul li {
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* Estilos de la imagen */
@@ -201,23 +191,125 @@ body {
     border-radius: 10px;
 }
 
-/* Media query para pantallas más pequeñas (opcional, pero recomendado) */
-@media (max-width: 768px) {
-    .hero-img {
-        max-width: 80%;
-        position: static;
-        margin: 20px auto;
-        display: block;
-    }
-}
-
 .btn-light {
     font-weight: bold;
-
     width: 20%;       /* ancho fijo */
     margin: 0 auto;   /* centrado horizontal */
     text-align: center;
+    
+    /* Estilo base bonito */
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid #f0f0f0;
+    background-color: #fff;
+    color: #333;
+    
+    /* Transición para suavizar efectos */
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
+
+/* Efecto al pasar el mouse */
+.btn-light:hover {
+    background-color: #ffe6f0;  /* cambio de color suave */
+    transform: translateY(-3px) scale(1.05); /* efecto “flotante” y agrandado */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* sombra ligera */
+}
+
+/* Efecto al hacer click */
+.btn-light:active {
+    transform: translateY(0) scale(0.98); /* efecto de presionado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-light::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    transition: all 0.5s;
+    border-radius: 12px;
+}
+
+.btn-light:hover::after {
+    left: 100%;
+}
+
+/* Para pantallas medianas (tablets, <992px) */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 5rem;  /* texto más pequeño */
+    }
+
+    .hero-section p {
+        font-size: 1.5rem;
+    }
+
+    .hero-section ul li {
+        font-size: 20px;
+    }
+
+    .hero-img {
+        max-width: 50%;
+    }
+
+    .btn-light {
+        width: 30%;  /* un poco más ancho relativo */
+        padding: 8px 16px;
+    }
+}
+
+/* Para pantallas pequeñas (móviles, <768px) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+        text-align: center; /* aseguramos centrado */
+    }
+
+    .hero-section ul li {
+        font-size: 18px;
+    }
+
+    .hero-img {
+        max-width: 70%; /* imagen más responsiva */
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .btn-light {
+        width: 50%; /* ocupa más espacio en móvil */
+        padding: 10px 20px;
+    }
+}
+
+/* Para pantallas muy pequeñas (<480px) */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .hero-section ul li {
+        font-size: 16px;
+    }
+
+    .btn-light {
+        width: 70%;
+        padding: 10px 15px;
+    }
+}
+
+/* -------------MEDIA QUERY HERO SECTION-------------*/
 
 /* Seminuevos */
 .seminuevos-section {
@@ -248,7 +340,8 @@ body {
   border-radius: 10px;
 }
 
-/* Equipos Nuevos */
+
+/* -------------Equipos Nuevos------------- */
 .divEquiposNuevos {
   background-color: #01446f;
 }
