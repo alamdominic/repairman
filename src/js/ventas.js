@@ -1,9 +1,40 @@
-//import { addToCarrito } from "./index";
-const onClick = async (event) => {
-    const id = document.getElementsByName("newId");
-   
-    const saleid = document.getElementsByName("newId")[0].value;  // Guardamos el id de saleID
+function addToCarrito(producto){
+    // json.parse Intenta obtener el 'carrito' del localStorage y convertirlo en un arreglo. Si no existe o está vacío, entonces usa un arreglo vacío como valor inicial
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+    // Verificamos si el producto ya está en el carrito para actualizar la cantidad
+    const productoExistente = carrito.find(item => item.id === producto.id);
+
+    if (productoExistente) {
+        // Si ya existe, incrementamos la cantidad
+        productoExistente.cantidad++;
+    } else {
+        //...producto -> Operador de propacion
+        // Hace una copia de todas las propiedades del producto original en el objeto carrito.
+        // Si no existe, agregamos una cantidad (nueva propiedad) inicial de 1
+        carrito.push({ ...producto, cantidad: 1 });
+    }
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    alert(`${producto.productName} ha sido añadido al carrito.`);
+}
+
+const onClick = async (event) => {
+    const saleid = document.getElementsByName("newId")[0].value;  // Guardamos el id de saleID
+    
+    const url =`http://localhost:8080/api/v1/repairman/sales/${saleid}`;
+
+    const res = await fetch(url);
+    const productJson = await res.json();
+    const newProduct = {
+        id: productJson.salesID,
+        productName:productJson.model, 
+        imagen: productJson.imageUrl,
+        productDescription: productJson.description,
+        productCost: productJson.price
+    }
+
+    addToCarrito(newProduct);
+    
 }
 
 const showProducts = async (event) => {
