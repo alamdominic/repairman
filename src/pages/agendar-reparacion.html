@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/src/css/agendar-reparacion.css">
+    <link rel="stylesheet" href="../css/agendar-reparacion.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
     <title>Agenda tu reparación</title>
@@ -67,7 +67,7 @@
                     </p>
                     
                     <a href="https://api.whatsapp.com/send?phone=522213601451" target="_blank" id="waImage">
-                        <img src="/src/img/wa.png" class="waLink" alt="Enlace whatsapp">
+                        <img src="../img/wa.png" class="waLink" alt="Enlace whatsapp">
                     </a>
                     <br><br><br>
                 </div>
@@ -78,15 +78,19 @@
                         <!--<label for="name">Tu nombre: </label>
                         <input name="name" id="name" type="text" placeholder="Escribe tu nombre" required> -->
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="email">Tu correo: </label>
                                 <input name="email" id="email" type="email" placeholder="tucorreo@mail.com" required
                                 class="form-control">
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="phone">Tu número de celular: </label>
                                 <input name="phone" id="phone" type="tel" placeholder="XXX XXX XXXX" required
                                 class="form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="date">Elige una fecha</label>
+                                <input type="date" class="form-control" name="date" id="date">
                             </div>
                         </div>
                         <hr>
