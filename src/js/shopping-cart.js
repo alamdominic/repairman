@@ -79,7 +79,7 @@ function updateCartTotal() {
         subtotal += item.productCost * item.cantidad;
     });
 
-    const envio = 20; // Valor fijo
+    const envio = 199; // Valor fijo
     const impuestos = 0.16; // 16% de impuestos
     const total = subtotal + envio + (subtotal * impuestos);
 
