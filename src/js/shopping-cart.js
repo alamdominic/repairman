@@ -52,6 +52,9 @@ function eliminarProducto(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito = carrito.filter(item => item.id !== id);
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    if (carrito.length === 0) {
+        location.reload();
+    }
     showCarrito(); // Vuelve a renderizar el carrito
 }
 
@@ -74,7 +77,8 @@ function cambiarCantidad(id, cambio) {
 /** Calcula subtotal, envío, total. */
 function updateCartTotal() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    let subtotal = 0;
+
+    let subtotal=0;
     carrito.forEach(item => {
         subtotal += item.productCost * item.cantidad;
     });
