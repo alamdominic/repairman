@@ -52,10 +52,9 @@ function displayCustomers(customersData) {
         const fullName = `${customer.firstname || ''} ${customer.lastname || ''}`.trim() || 'N/A';
 
         row.innerHTML = `
-            <td>${customer.customerID || 'N/A'}</td> <td>${fullName}</td>
-            <td>${customer.username || 'N/A'}</td>
-            <td>${customer.email || 'N/A'}</td>
-            <td>${customer.phonenumber || 'N/A'}</td> `;
+            <td>${customer.customerID || 'N/A'}</td> 
+            <td><a href="" >${fullName}</td>
+            <td>${customer.email || 'N/A'}</td>`;
         tbody.appendChild(row);
     });
 }

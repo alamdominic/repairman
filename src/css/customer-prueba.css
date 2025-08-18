@@ -36,6 +36,39 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.btn-personalizado {
+    /* Color de fondo personalizado */
+    background-color: #004f7a;
+    color: white;
+    /* Evitar herencia de hover de Bootstrap */
+    transition: none;
+    /* Eliminar sombra y bordes predeterminados */
+    box-shadow: none;
+    border: none;
+}
+
+/* Prevenir cambios de estado */
+.btn-personalizado:hover,
+.btn-personalizado:focus,
+.btn-personalizado:active,
+.btn-personalizado:not(:disabled):not(.disabled):active,
+.btn-personalizado.show+.dropdown-toggle {
+    background-color: #004f7a;
+    /* cursor pointer */
+    cursor: pointer;
+    /* borde */
+    border: none;
+    /* opacidad */
+    opacity: 1;
+    color: white;
+}
+
+/* Icono y texto */
+#refreshIcon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 #refreshIcon {
     font-size: 1.2rem;
     transition: transform 0.5s ease;
@@ -46,8 +79,13 @@
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Estados de carga y error */
@@ -254,6 +292,7 @@
 }
 
 @media (max-width: 576px) {
+
     .excel-table thead th,
     .excel-table tbody td {
         padding: 8px 10px;
@@ -274,6 +313,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

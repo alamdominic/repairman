@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/src/css/agendarReparacion.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <title>Agenda tu reparación</title>
+    <link rel="stylesheet" href="../css/customer-prueba.css">
+    <link rel="stylesheet" href="../css/register-page.css">
+    <title>Repairman: Clientes Registrados</title>
     <link rel="icon" href="../img/favicon.ico">
 </head>
 
@@ -33,7 +34,7 @@
                         <a class="nav-link" href="compra.html">Comprar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="agendaReparacion.html">Reparar</a>
+                        <a class="nav-link" href="agendar-reparacion.html">Reparar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contacto</a>
@@ -42,7 +43,7 @@
                         <a class="nav-link" href="about.html">Conócenos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shoppingCart.html">
+                        <a class="nav-link" href="shopping-cart.html">
                             Mi carrito <span class="material-symbols-outlined align-middle"
                                 aria-hidden="true">shopping_bag</span>
                         </a>
@@ -50,97 +51,113 @@
                 </ul>
                 <div class="d-flex align-items-center navbar__actions">
                     <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Regístrate</a>
-                    <a class="nav-link to_action" href="customerPrueba.html">Clientes</a>
+                    <a class="nav-link to_action" href="customer-list.html">Clientes</a>
                 </div>
             </div>
         </div>
     </nav>
-    <section id="contact">
-        <h2 class="text-center"></h2>
+
+    <main class="main-content">
         <div class="container">
-            <div class="row justify-content-center text-center align-items-stretch h-100" style="min-height: 100vh;">
-                <div class="col-md-4 d-flex flex-column align-items-center mb-4 h-100" id="infoContact">
-                    <br><br><br>
-                    <h2>Chatea con nosotros</h2>
-                    <p>Nuestro equipo se encargará de platicar contigo y darte toda la información que necesites. <br>
-                        Haz click en el icono de abajo.
-                    </p>
-                    
-                    <a href="https://api.whatsapp.com/send?phone=522213601451" target="_blank" id="waImage">
-                        <img src="/src/img/wa.png" class="waLink" alt="Enlace whatsapp">
-                    </a>
-                    <br><br><br>
+            <div class="table-header">
+                <h1>Clientes Registrados</h1>
+                <button class="btn btn-personalizado" onclick="refreshData()">
+                    <span id="refreshIcon">🔄</span> Actualizar
+                </button>
+            </div>
+
+            <!-- Estado de carga -->
+            <div id="loadingState" class="loading-state">
+                <div class="spinner"></div>
+                <p>Cargando clientes...</p>
+            </div>
+
+            <!-- Estado de error -->
+            <div id="errorState" class="error-state d-none">
+                <div class="error-icon">⚠️</div>
+                <h3>Error al cargar los datos</h3>
+                <p>No se pudieron obtener los clientes de la base de datos.</p>
+                <button class="btn btn-personalizado" onclick="loadCustomers()">Reintentar</button>
+            </div>
+
+            <!-- Tabla de clientes -->
+            <div id="tableContainer" class="table-container d-none">
+                <div class="table-responsive">
+                    <table class="table table table-hover table-sm" id="customersTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customersTableBody">
+                            <!-- Los datos se cargarán aquí -->
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-md-8 d-flex justify-content-center h-100">
-                    <form id="repair-form" class="formularioContacto">
-                        <h2>Agenda tu reparación</h2>
-                        <h5>Uno de nuestros asesores se contactará contigo.</h5>
-                        <!--<label for="name">Tu nombre: </label>
-                        <input name="name" id="name" type="text" placeholder="Escribe tu nombre" required> -->
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="email">Tu correo: </label>
-                                <input name="email" id="email" type="email" placeholder="tucorreo@mail.com" required
-                                class="form-control">
-                            </div>
-                            <div class="col-6">
-                                <label for="phone">Tu número de celular: </label>
-                                <input name="phone" id="phone" type="tel" placeholder="XXX XXX XXXX" required
-                                class="form-control">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col">
-                                <label for="customerSelect" class="form-label">Nombre Cliente</label>
-                                <select class="form-select" id="customerSelect" name="customerSelect">
-                                    <option selected>Cargando clientes...</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <label for="brand">Marca del equipo:</label>
-                                <input name="brand" id="brand" type="text" placeholder="Apple, Samsung, etc."
-                                    class="form-control" required>
-                            </div>
-                            <div class="col-4">
-                                <label for="model">Modelo del equipo:</label>
-                                <input name="model" id="model" type="text" placeholder="iPhone 14, Galaxy S23, etc."
-                                    class="form-control" required>
-                            </div>
-                            <div class="col-4">
-                                <label for="cellphoneStatus">Estatus</label>
-                                <input type="text" name="cellphoneStatus" id="cellphoneStatus" placeholder="Activo/Inactivo" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="imageurl">Imagen:</label>
-                                <input name="imageurl" id="imageurl" type="url" class="form-control"
-                                    placeholder="https://...">
-                            </div>
-                            <div class="col-6">
-                                <label for="price">Costo</label>
-                                <input type="number" id="price" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="issue">Falla:</label>
-                                <input name="issue" id="issue" type="text" class="form-control"
-                                    placeholder="Pantalla estrellada" required>
-                                <label for="description" class="mt-2">Descripción del problema:</label>
-                                <textarea name="description" id="description" class="form-control"
-                                    placeholder="Se rompió la pantalla luego de caerse..." required></textarea>
-                            </div>
-                        </div>
-                        <button type="submit">Enviar</button>
-                    </form>
+                <div class="table-info">
+                    <span id="recordCount">0 registros encontrados</span>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Formulario de edición -->
+        <div class="container mt-3" id="edit-customer">
+            <h3>Editar información</h3>
+            <form id="register-form">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="name" class="form-label">Nombre</label>
+                        <div class="input-group position-relative">
+                            <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                            <input type="text" id="name" name="name" placeholder="Nombre" required
+                                class="form-control with-icon" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="lastname" class="form-label">Apellido</label>
+                        <div class="input-group position-relative">
+                            <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                            <input type="text" id="lastname" name="lastname" placeholder="Apellido" required
+                                class="form-control with-icon" />
+                        </div>
+                    </div>
+                </div>
+                <label for="nickname" class="form-label">Username</label>
+                <div class="input-group position-relative">
+                    <img src="../img/user.svg" alt="Icono usuario" class="input-icon" />
+                    <input type="text" id="nickname" name="nickname" placeholder="Username" required
+                        class="form-control with-icon" />
+                </div>
+                <label for="email" class="form-label">Correo</label>
+                <div class="input-group position-relative">
+                    <img src="../img/mail.svg" alt="Icono correo" class="input-icon" />
+                    <input type="email" id="email" name="email" placeholder="correo@mail.com" required
+                        class="form-control with-icon" />
+                </div>
+
+                <label for="password" class="form-label">Contraseña</label>
+                <div class="input-group position-relative password-wrapper">
+                    <img src="../img/password.svg" alt="Icono contraseña" class="input-icon" />
+                    <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required
+                        autocomplete="new-password" class="form-control with-icon" />
+                    <button type="button" class="password-toggle-btn" aria-label="Mostrar contraseña" tabindex="0">
+                        <img src="../img/eye_password_show.svg" alt="Mostrar contraseña" class="eye-icon" />
+                    </button>
+                </div>
+
+                <label for="phone" class="form-label">Número Telefónico</label>
+                <div class="input-group position-relative">
+                    <img src="../img/phone.svg" alt="Icono teléfono" class="input-icon" />
+                    <input type="tel" id="phone" name="phone" placeholder="Número teléfonico"
+                        class="form-control with-icon" />
+                </div>
+
+                <button id="submit" class="btn btn-primary w-100 mt-3" id="form-button">Guardar</button>
+            </form>
+        </div>
+
+    </main>
 
     <footer id="footer">
         <div class="container">
@@ -203,13 +220,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
         integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
         crossorigin="anonymous"></script>
-        <script src="../js/repair.js"></script>
+    <script src="/src/js/customer-prueba.js"></script>
 </body>
 
 </html>
