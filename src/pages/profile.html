@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Perfil - Repairman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/LogInStyle.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="#efecto_navbar" class="navbar fixed-top navbar-expand-xl bg-body-tertiary"
+        aria-label="Menú de navegación principal">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../img/logo-repairman.png" width="75" height="45" alt="Logo Repairman, ir a página de inicio">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar__links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Vender</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compra.html">Comprar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agendar-reparacion.html">Reparar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Conócenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shopping-cart.html">
+                            Mi carrito <span class="material-symbols-outlined align-middle"
+                                aria-hidden="true">shopping_bag</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center navbar__actions">
+                    <a href="register-page.html" class="nav-link to_action me-auto me-xl-2">Regístrate</a>
+                    <a class="nav-link to_action" href="login-page.html">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <div class="container profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" 
+                         alt="Foto de perfil" class="profile-image">
+                </div>
+                <div class="col">
+                    <h2 class="mb-1" style="color: #004f7a;">Juan Pérez</h2>
+                    <p class="text-muted mb-0">juanperez@email.com</p>
+                    <p class="text-muted mb-0">Usuario desde: Enero 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Information Form -->
+        <div class="profile-info">
+            <h3 class="profile-title">AJUSTES DE CUENTA</h3>
+            
+            <form id="profile-form" onsubmit="onProfileSubmit(event)">
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" value="Juan" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" value="Pérez" required>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="usuario" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario" value="juanperez" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" value="juanperez@email.com" required>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="email-alternativo" class="form-label">Correo electrónico alternativo</label>
+                        <input type="email" class="form-control" id="email-alternativo" name="email-alternativo" placeholder="correo.alternativo@email.com">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="telefono" class="form-label">Número telefónico</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" value="+52 12345 67890">
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="col-md-4">
+                        <label for="pais" class="form-label">País</label>
+                        <select class="form-control" id="pais" name="pais">
+                            <option value="mexico" selected>México</option>
+                            <option value="usa">Estados Unidos</option>
+                            <option value="canada">Canadá</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-save">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row-footer">
+                <!-- Información legal -->
+                <div class="col legal-column">
+                    <h2 class="footer-title">Información legal</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="informacion-legal/politica-de-privacidad.html"
+                                aria-label="Política de privacidad" class="footer-link">Política de privacidad</a></li>
+                        <li class="footer-list-item"><a href="informacion-legal/aviso-legal.html"
+                                aria-label="Aviso legal" class="footer-link">Aviso legal</a></li>
+                        <li class="footer-list-item"><a href="informacion-legal/politica-de-cookies.html"
+                                aria-label="Política de cookies" class="footer-link">Política de cookies</a></li>
+                        <li class="footer-list-item"><a href="informacion-legal/garantia.html" aria-label="Garantía"
+                                class="footer-link">Garantía</a></li>
+                    </ul>
+                </div>
+
+                <!-- Preguntas frecuentes -->
+                <div class="col faq-column">
+                    <h2 class="footer-title">Preguntas frecuentes</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#tipos-de-reparaciones"
+                                aria-label="¿Qué tipos de reparaciones ofrecen?" class="footer-link">¿Qué tipos de
+                                reparaciones ofrecen?</a></li>
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#tiempo-de-reparacion"
+                                aria-label="¿Cuánto tiempo tarda una reparación?" class="footer-link">¿Cuánto tiempo
+                                tarda una reparación?</a></li>
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#incluye-garantia"
+                                aria-label="¿Qué incluye la garantía?" class="footer-link">¿Qué incluye la garantía?</a>
+                        </li>
+                        <li class="footer-list-item"><a href="preguntas-frecuentes.html#vender-celular"
+                                aria-label="¿Cómo puedo vender mi celular usado?" class="footer-link">¿Cómo puedo vender
+                                mi celular usado?</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="col social-column">
+                    <nav class="social-media-links" role="navigation" aria-label="Redes sociales">
+                        <a href="https://www.facebook.com/repairmanpuebla/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook" class="social-media-icon">
+                            <img src="../img/facebook-logo.svg" alt="Facebook" />
+                        </a>
+                        <a href="https://www.instagram.com/repairmanpuebla/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram" class="social-media-icon">
+                            <img src="../img/instagram-logo.svg" alt="Instagram" />
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=522213601451" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp" class="social-media-icon">
+                            <img src="../img/whatsapp-logo.svg" alt="WhatsApp" />
+                        </a>
+                        <a href="mailto:contacto.repairman@gmail.com" aria-label="Email" class="social-media-icon">
+                            <img src="../img/gmail-logo.svg" alt="Email" />
+                        </a>
+                    </nav>
+                    <p class="copyright">© 2025 — Repairman</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>
