@@ -62,7 +62,7 @@ document.getElementById('repair-form').addEventListener('submit', async function
         description: form.querySelector('#description').value,
         imageUrl: form.querySelector('#imageurl').value,
         cellphoneStatus: form.querySelector('#cellphoneStatus').value,
-        price: form.querySelector('#price').value,
+        price: 100,
         customer: {
             customerID: customerID
         }
