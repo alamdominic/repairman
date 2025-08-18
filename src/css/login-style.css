@@ -15,7 +15,7 @@ body {
 /* Caja del formulario */
 .formularioLogIn .border {
     background: #fff;
-    padding: 40px 45px;
+    padding: 25px;
     border-radius: 16px;                  /* bordes más suaves */
     box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* sombra elegante */
     max-width: auto;
