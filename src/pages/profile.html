@@ -71,7 +71,6 @@
                 <div class="col">
                     <h2 class="mb-1" style="color: #004f7a;">Juan Pérez</h2>
                     <p class="text-muted mb-0">juanperez@email.com</p>
-                    <p class="text-muted mb-0">Usuario desde: Enero 2024</p>
                 </div>
             </div>
         </div>
@@ -128,6 +127,36 @@
 
                 <div class="text-center mt-4">
                     <button type="submit" class="btn btn-save">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Password Change Section -->
+        <div class="profile-info mt-5">
+            <h3 class="profile-title">CAMBIAR CONTRASEÑA</h3>
+            
+            <form id="password-form" onsubmit="onPasswordSubmit(event)">
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="current-password" class="form-label">Contraseña actual</label>
+                        <input type="password" class="form-control" id="current-password" name="current-password" required>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="new-password" class="form-label">Nueva contraseña</label>
+                        <input type="password" class="form-control" id="new-password" name="new-password" required minlength="8">
+                        <div class="form-text">La contraseña debe tener al menos 8 caracteres.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="confirm-password" class="form-label">Confirmar nueva contraseña</label>
+                        <input type="password" class="form-control" id="confirm-password" name="confirm-password" required minlength="8">
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-save">Cambiar contraseña</button>
                 </div>
             </form>
         </div>
@@ -202,6 +231,7 @@
         crossorigin="anonymous"></script>
 
     <script src="../js/profile.js"></script>
+
 </body>
 
 </html>
