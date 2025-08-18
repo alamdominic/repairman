@@ -1,3 +1,24 @@
+function formatCurrency(value) {
+  return `$${value.toLocaleString('es-MX')}`;
+}
+
+function totalValue() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let subtotal = 0;
+    carrito.forEach(item => {
+        subtotal += item.productCost * item.cantidad;
+    });
+
+    const envio = 199; // Valor fijo
+    const impuestos = 0.16; // 16% de impuestos
+    const taxes = subtotal * impuestos;
+    let total = subtotal + envio + taxes;
+
+    const monto = document.getElementById("monto");
+    monto.placeholder = formatCurrency(total);
+    // monto.value = total;
+}
+
 (function () {
     const form = document.getElementById('paymentForm');
     form.addEventListener('submit', function (e) {
@@ -38,3 +59,7 @@ Gracias.`;
         form.classList.remove('was-validated');
     });
 })();
+
+window.onload = () => {
+    totalValue();
+}
