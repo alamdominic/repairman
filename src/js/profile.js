@@ -9,3 +9,7 @@ function onProfileSubmit(event) {
     const userData = Object.fromEntries(formData);
     console.log('Datos del usuario:', userData);
 }
+
+function getCustomerInfo(){
+    const url = ''
+}
