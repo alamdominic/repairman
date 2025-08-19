@@ -53,7 +53,7 @@ function displayCustomers(customersData) {
 
         row.innerHTML = `
             <td>${customer.customerID || 'N/A'}</td> 
-            <td><a href="" >${fullName}</td>
+            <td>${fullName}</td>
             <td>${customer.email || 'N/A'}</td>`;
         tbody.appendChild(row);
     });

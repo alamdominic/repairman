@@ -65,11 +65,13 @@
         <div class="profile-header">
             <div class="row align-items-center">
                 <div class="col-auto">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Foto de perfil" class="profile-image">
+                    <img src="https://www.pngkey.com/png/full/443-4439204_anonymous-icons-download-for-free-in-png-and.png" alt="Foto de perfil" class="profile-image">
                 </div>
-                <div class="col">
+                <div class="col" id="user-information">
+                    <!--
                     <h2 class="mb-1" style="color: #004f7a;">Juan Pérez</h2>
                     <p class="text-muted mb-0">juanperez@email.com</p>
+                    -->
                 </div>
             </div>
         </div>
@@ -78,7 +80,7 @@
         <div class="profile-info">
             <h3 class="profile-title">AJUSTES DE CUENTA</h3>
             
-            <form id="profile-form" onsubmit="onProfileSubmit(event)">
+            <form id="profile-form" >
                 <div class="row form-row">
                     <div class="col-md-6">
                         <label for="nombre" class="form-label">Nombre</label>
@@ -103,29 +105,12 @@
 
                 <div class="row form-row">
                     <div class="col-md-6">
-                        <label for="email-alternativo" class="form-label">Correo electrónico alternativo</label>
-                        <input type="email" class="form-control" id="email-alternativo" name="email-alternativo" placeholder="correo.alternativo@email.com">
-                    </div>
-                    <div class="col-md-6">
                         <label for="telefono" class="form-label">Número telefónico</label>
                         <input type="tel" class="form-control" id="telefono" name="telefono" value="+52 12345 67890">
                     </div>
                 </div>
-
-                <div class="row form-row">
-                    <div class="col-md-4">
-                        <label for="pais" class="form-label">País</label>
-                        <select class="form-control" id="pais" name="pais">
-                            <option value="mexico" selected>México</option>
-                            <option value="usa">Estados Unidos</option>
-                            <option value="canada">Canadá</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                </div>
-
                 <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-save">Guardar cambios</button>
+                    <button type="submit" class="btn btn-save" id="profile-submit-btn">Guardar cambios</button>
                 </div>
             </form>
         </div>
@@ -134,7 +119,7 @@
         <div class="profile-info mt-5">
             <h3 class="profile-title">CAMBIAR CONTRASEÑA</h3>
             
-            <form id="password-form" onsubmit="onPasswordSubmit(event)">
+            <form id="password-form" >
                 <div class="row form-row">
                     <div class="col-md-6">
                         <label for="current-password" class="form-label">Contraseña actual</label>
@@ -155,7 +140,7 @@
                 </div>
 
                 <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-save">Cambiar contraseña</button>
+                    <button type="submit" id="password-submit-btn" class="btn btn-save">Cambiar contraseña</button>
                 </div>
             </form>
         </div>
