@@ -15,8 +15,8 @@ function totalValue() {
     let total = subtotal + envio + taxes;
 
     const monto = document.getElementById("monto");
-    monto.placeholder = formatCurrency(total);
-    // monto.value = total;
+    // monto.placeholder = formatCurrency(total);
+    monto.value = total;
 }
 
 (function () {
