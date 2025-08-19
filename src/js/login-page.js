@@ -7,7 +7,11 @@
 const onLogInSubmit = async (event) => {
     // Es como decirle al navegador: "¡Espera! No hagas lo que normalmente haces, yo me encargo"
     event.preventDefault();
+    
+    const res = document.getElementById("email");
 
+    const email = res.value;
+    localStorage.setItem("email", email);
     // Obtenemos una referencia al elemento HTML donde mostraremos los mensajes al usuario.
     const messageElement = document.getElementById('message');
 
