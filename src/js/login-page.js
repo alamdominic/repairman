@@ -7,7 +7,7 @@
 const onLogInSubmit = async (event) => {
     // Es como decirle al navegador: "¡Espera! No hagas lo que normalmente haces, yo me encargo"
     event.preventDefault();
-
+    console.log(event.target);
     // Obtenemos una referencia al elemento HTML donde mostraremos los mensajes al usuario.
     const messageElement = document.getElementById('message');
 
