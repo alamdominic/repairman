@@ -1,5 +1,5 @@
 // Este script maneja la lógica de inicio de sesión.
-// La función onLogInSubmit es asíncrona para poder usar 'await' y esperar la respuesta del servidor.
+// La función asíncrona para poder usar 'await' y esperar la respuesta del servidor.
 const onLogInSubmit = async (event) => {
     // Previene el comportamiento por defecto del formulario (recargar la página).
     event.preventDefault();
@@ -33,7 +33,7 @@ const onLogInSubmit = async (event) => {
             const result = await response.json();
             console.log('¡Login exitoso!', result);
 
-            // ✅ Guarda el email del usuario en localStorage solo si el login es exitoso.
+            //Guarda el email del usuario en localStorage solo si el login es exitoso.
             // Esto asegura que el email esté disponible en la siguiente página.
             localStorage.setItem("email", user.email);
             
