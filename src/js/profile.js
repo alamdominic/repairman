@@ -10,6 +10,31 @@ function onProfileSubmit(event) {
     console.log('Datos del usuario:', userData);
 }
 
+
 function getCustomerInfo(){
-    const url = ''
+    const customerEmail = localStorage.getItem("email", email);
+    
+    const url = 'http://localhost:8080/api/v1/repairman/customer/email/${customerEmail}';
+
+    fetch(url)
+    .then(response => {
+        // Verifica si la respuesta es exitosa
+        if (!response.ok) {
+            // Lanza un error si la respuesta no es exitosa
+            throw new Error(`Error en la petición: ${response.status} ${response.statusText}`);
+        }
+        // Parsea la respuesta como JSON
+        return response.json();
+    })
+    .then(data => {
+        // Maneja los datos de la respuesta 
+        console.log("Datos del cliente:", data);
+    })
+    .catch(error => {
+        // maneja cualquier error de la petición
+        console.error("Hubo un problema con la operación fetch:", error);
+    });
+
 }
+
+getCustomerInfo();
