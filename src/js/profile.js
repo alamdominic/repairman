@@ -2,7 +2,7 @@
 // Se inicializa en null y se llenará más tarde.
 let customerId = localStorage.getItem("email");
 
-// Escucha el evento de carga del DOM para ejecutar la lógica de la página.
+// Evento de carga del DOM para carga de la página.
 document.addEventListener("DOMContentLoaded", function() {
     // Llama a la función que obtiene la información del cliente.
     getCustomerInfo();
@@ -165,6 +165,15 @@ function getCustomerInfo() {
         if (submitPasswordButton) {
             submitPasswordButton.disabled = false;
         }
+        
+        // mostrar username en el navbar
+        const navUser = document.getElementById("username-info");
+        const spanName = document.createElement("span");
+        spanName.classList.add('fw-semibold');
+        spanName.textContent =  customer.firstname + ' ' + customer.lastname;
+
+        // agregar el span al div dentro del navbar
+        navUser.appendChild(spanName);
 
         const userinfo = document.getElementById("user-information");
         const fechaDeAPI = customer.createdat;
