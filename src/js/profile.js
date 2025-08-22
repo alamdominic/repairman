@@ -179,8 +179,8 @@ function getCustomerInfo() {
         const fechaDeAPI = customer.createdat;
         const fecha = new Date(fechaDeAPI);
         const formato = {
-            year: 'numeric', month: 'long', day: 'numeric',
-            hour: '2-digit', minute: '2-digit', second: '2-digit'
+            year: 'numeric', month: 'long', day: 'numeric'
+            //hour: '2-digit', minute: '2-digit', second: '2-digit'
         };
         const fechaFormateada = fecha.toLocaleDateString('es-MX', formato);
 
@@ -190,7 +190,7 @@ function getCustomerInfo() {
 
         const p = document.createElement('p');
         p.classList.add('text-muted', 'fw-medium');
-        p.innerHTML = `@${customer.username} | ${customer.email} | ${customer.phonenumber} <br> Miembro desde: ${fechaFormateada}`;
+        p.innerHTML = `<strong>@${customer.username} </strong> | ${customer.email} | ${customer.phonenumber} <br> Miembro desde: ${fechaFormateada}`;
             
         userinfo.appendChild(h1);
         userinfo.appendChild(p);
